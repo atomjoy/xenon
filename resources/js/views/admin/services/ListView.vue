@@ -4,16 +4,16 @@ import Layout from './parts/Layout.vue';
 import ListRow from './ListRow.vue';
 import { useRoute } from 'vue-router';
 import { onMounted, watch } from 'vue';
-import { useArticleStore } from '@/stores/article.js';
+import { useItemStore } from '@/stores/service.js';
 
-const store = useArticleStore();
+const store = useItemStore();
 const route = useRoute();
 
 onMounted(async () => {
 	store.clearError();
 	store.current_page = route.query.page ?? 1;
 	await store.loadList();
-	// console.log('ListView Articles', store.list);
+	// console.log('Item', store.list);
 });
 
 watch(
@@ -27,14 +27,13 @@ watch(
 
 <template>
 	<Layout :message="store.getMessage" :error="store.getError">
-		<Group title="Articles" desc="List of articles.">
+		<Group title="Services" desc="List of services.">
 			<table class="panel_table_list">
 				<tr class="panel_list_header">
 					<th scope="col" class="panel_list_title">{{ $t('ID') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Image') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Title') }}</th>
-					<th scope="col" class="panel_list_title">{{ $t('Category') }}</th>
-					<th scope="col" class="panel_list_title">{{ $t('Author') }}</th>
+					<th scope="col" class="panel_list_title">{{ $t('Tags') }}</th>
 					<th scope="col" class="panel_list_title panel_list_title_last">{{ $t('Action') }}</th>
 				</tr>
 

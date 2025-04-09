@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tag;
+use App\Models\Admin;
 use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Http\Resources\ArticleResource;
-use App\Models\Admin;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +26,7 @@ class ArticleController extends Controller
 		// Gate::authorize('viewAny', [Article::class, $team_id]);
 		Gate::authorize('viewAny', Article::class);
 
-		$perpage = request()->integer('perpage', default: 5);
+		$perpage = request()->integer('perpage', default: 6);
 
 		// All articles
 		if (Auth::user()->hasRole(['admin', 'super_admin'])) {

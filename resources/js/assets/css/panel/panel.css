@@ -616,6 +616,17 @@
 	stroke-width: 1.5;
 }
 
+.panel_list_tag {
+	float: left;
+	font-size: 12px;
+	padding: 3px 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	background: var(--bg-1);
+	border: 1px solid var(--input-border);
+	border-radius: var(--border-radius);
+}
+
 .panel_list_links {
 	float: left;
 	width: 100%;

@@ -4,8 +4,10 @@ import IconCategories from '@/assets/icons/IconCategories.vue';
 import IconEdit from '@/assets/icons/IconEdit.vue';
 import IconReply from '@/assets/icons/IconReply.vue';
 import IconAlbum from '@/assets/icons/IconAlbum.vue';
+import IconProject from '@/assets/icons/IconProject.vue';
 import IconContact from '@/assets/icons/IconContact.vue';
 import IconSubscriber from '@/assets/icons/IconSubscriber.vue';
+import IconService from '@/assets/icons/IconService.vue';
 import NavbarLayout from './NavbarLayout.vue';
 import NavbarLink from './NavbarLink.vue';
 
@@ -40,6 +42,14 @@ const store = useAuthStore();
 			</NavbarLink>
 
 			<div class="only_admin" v-if="store.hasRole('worker', 'admin') || store.hasRole('admin', 'admin') || store.hasRole('super_admin', 'admin')">
+				<NavbarLink to="/admin/services" text="Services">
+					<IconService />
+				</NavbarLink>
+
+				<NavbarLink to="/admin/projects" text="Projects">
+					<IconProject />
+				</NavbarLink>
+
 				<NavbarLink to="/admin/contacts" text="Contacts">
 					<IconContact />
 				</NavbarLink>

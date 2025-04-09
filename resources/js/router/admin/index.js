@@ -47,6 +47,54 @@ const routes = [
 		component: () => import('@/views/admin/settings/Account/DeleteView.vue'),
 		meta: { requiresAdmin: true },
 	},
+	// Projects
+	{
+		path: '/admin/projects/edit',
+		name: 'admin.projects.edit',
+		redirect: { name: 'admin.projects' },
+	},
+	{
+		path: '/admin/projects',
+		name: 'admin.projects',
+		component: () => import('@/views/admin/projects/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/projects/create',
+		name: 'admin.projects.create',
+		component: () => import('@/views/admin/projects/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/projects/edit/:id',
+		name: 'admin.projects.edit.id',
+		component: () => import('@/views/admin/projects/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	// Services
+	{
+		path: '/admin/services/edit',
+		name: 'admin.services.edit',
+		redirect: { name: 'admin.services' },
+	},
+	{
+		path: '/admin/services',
+		name: 'admin.services',
+		component: () => import('@/views/admin/services/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/services/create',
+		name: 'admin.services.create',
+		component: () => import('@/views/admin/services/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/services/edit/:id',
+		name: 'admin.services.edit.id',
+		component: () => import('@/views/admin/services/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
 	// Contacts
 	{
 		path: '/admin/contacts/edit',

@@ -14,6 +14,8 @@ use App\Http\Controllers\ArticleMediaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Auth;
@@ -89,6 +91,13 @@ Route::prefix('web/api/admin')->name('web.api.admin')->middleware([
 		// Contact
 		Route::resource('contacts', ContactController::class)->except(['create', 'edit', 'store']);
 		Route::get('contacts/export/file', [ContactController::class, 'download']);
+		// Services
+		Route::resource('services', ServiceController::class)->except(['create', 'edit']);
+		Route::get('services/remove/{service}', [ServiceController::class, 'remove']);
+		// Project
+		Route::resource('projects', ProjectController::class)->except(['create', 'edit']);
+		Route::get('projects/remove/{project}', [ProjectController::class, 'remove']);
+
 
 		Route::get('/only-worker', function () {
 			return response()->json([

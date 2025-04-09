@@ -48,8 +48,8 @@ class Article extends Model
 	{
 		return [
 			'created_at' => 'datetime:Y-m-d H:i:s',
-			'schema' => 'json',
-			'meta' => 'json',
+			'schema_seo' => 'json',
+			'meta_seo' => 'json',
 		];
 	}
 
