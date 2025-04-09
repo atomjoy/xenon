@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+	color-scheme: light;
+	--bg-1: #ffffff;
+	--bg-2: #fafafa;
+	--bg-3: #f7f7f7;
+	--text-1: #0d0d0d;
+	--text-2: #5f6368;
+	--text-3: #73747a;
+	--accent-1: #6dd338;
+	--accent-2: #71e935;
+	--accent-3: #a6ff79;
+	--divider-1: #dadce0;
+	--divider-2: #e7e7e9;
+	--divider-3: #d4d7d0;
+	--border-1: #d8dad5;
+	--border-2: #e7e7e7;
+	--border-3: #ebebeb;
+	--icon-1: #cacaca;
+	--icon-2: #b4b8b8;
+	--icon-3: #858d8f;
+	--disabled-1: #909090;
+	--disabled-2: #757575;
+	--disabled-3: #505050;
+	--placeholder-1: #d0d0d0;
+	--placeholder-2: #97a2b2;
+	--placeholder-3: #727d8c;
+	--selection-bg: #0e7aff;
+	--selection-color: #ffffff;
+	--logo: url('/default/logo/logo-light.png');
+}
+
+/* color mode from browser settings */
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+		--bg-1: #141414;
+		--bg-2: #212121;
+		--bg-3: #333333;
+		--text-1: #f0f0f0;
+		--text-2: #a2a2a2;
+		--text-3: #7b7b7b;
+		--logo: url('/default/logo/logo-dark.png');
+	}
+}
+
+/* color mode from <html color-scheme="light"> */
+[color-scheme='light'] {
+	color-scheme: light;
+	--bg-1: #ffffff;
+	--bg-2: #fafafa;
+	--bg-3: #f7f7f7;
+	--text-1: #0d0d0d;
+	--text-2: #5f6368;
+	--text-3: #73747a;
+}
+
+/* color mode from <html color-scheme="dark"> */
+[color-scheme='dark'] {
+	color-scheme: dark;
+	--bg-1: #141414;
+	--bg-2: #212121;
+	--bg-3: #333333;
+	--text-1: #f0f0f0;
+	--text-2: #a2a2a2;
+	--text-3: #7b7b7b;
+	--logo: url('/default/logo/logo-dark.png');
+}
+
+/* page */
+:root {
+	--font-family: 'Poppins', Arial, Helvetica, sans-serif;
+	--font-family-code: 'JetBrains Mono', 'Fira Code', monospace;
+	--font-size: 16px;
+	--border-radius: 6px;
+	--button-border-radius: 10px;
+
+	/* scrollbar */
+	--scrollbar-width: 10px;
+	--scrollbar-bg: #e6e6e6;
+	--scrollbar-thumb: #00b13f;
+
+	/* alert error */
+	--alert-error: #fe093a;
+	--alert-error-bg: linear-gradient(to right, #fe093a15, #fe093a06);
+
+	/* alert info */
+	--alert-info: #00b13f;
+	--alert-info-bg: linear-gradient(to right, #00b13f15, #00b13f06);
+}
+
+* {
+	outline: 0px none transparent;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+::before,
+::after {
+	box-sizing: border-box;
+	content: none;
+}
+
+::placeholder {
+	color: var(--placeholder-1);
+	opacity: 1;
+}
+
+::selection {
+	background: var(--selection-bg);
+	color: var(--selection-color);
+}
+
+#app {
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+
+html,
+body {
+	margin: 0px;
+	padding: 0px;
+	min-height: 100vh;
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+	background: var(--bg-1);
+	transition: all 0.5s;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+iframe {
+	color-scheme: light !important;
+}
+
+p {
+	font-family: var(--font-family);
+}
+
+img,
+svg {
+	display: inline-block;
+	max-width: 100%;
+}
+
+/* panel scrollbar */
+.scrollbar_thin {
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+.scrollbar_thin::-webkit-scrollbar {
+	width: var(--scrollbar-width);
+	background: var(--scrollbar-thumb);
+}
+
+.scrollbar_thin::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-bg);
+}
+
+/* page sections */
+.section {
+	float: left;
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+}
+
+.section-center {
+	margin: 0px auto;
+	height: auto;
+	width: 90%;
+	max-width: 1120px;
+}
+
+/* logo */
+img.logo {
+	content: var(--logo);
+}

@@ -1,0 +1,22 @@
+{"tags":[{"name":"keywords","content":"blog"},{"name":"keywords","content":"page"}]}
+
+[
+    {
+        "attribute": "property",
+        "value": "og:title",
+        "content": "Example"
+    },
+    {
+        "attribute": "name",
+        "value": "keywords",
+        "content": "blog"
+    }
+]
+
+
+[{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Example Corp",
+	"url": "https://example.com"
+}]

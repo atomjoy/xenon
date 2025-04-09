@@ -1,0 +1,284 @@
+<!--
+Add to page header
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+pre {float: left; width: 100%; background: #000; padding: 5px;}
+code {font-family: "JetBrains Mono"; background: #0f0f0f; color: #fafafa;}
+pre code {float: left; width: 100%; padding-inline: 10px; background: #222; border: 1px solid #333; color: #fafafa; box-sizing: border-box;}
+</style>
+-->
+
+<h2>
+	<a href="https://cloud.laravel.com/sign-up">Laravel Cloud</a>
+</h2>
+
+<p>You're 60 seconds from deploying your first Laravel application without managing servers. Learn more or <a href="https://cloud.laravel.com/">try it now</a>.</p>
+
+<h3>Allowed tags</h3>
+<p> You can disable allowed tags in <strong>App\Validate\Html::allowedTags()</strong></p>
+
+
+<div class="article_image">
+	<img width="100%" src="https://laravel-blog-assets.s3.amazonaws.com/s69JkiLOvEVIp0JiJjEV6V9JzilFsCfxYMuM6m2o.png">
+</div>
+
+<ul>
+	<li>Automatic autoscaling and hibernation</li>
+	<li>One-click databases, caching, and storage (Postgres today; MySQL very soon)</li>
+	<li>Built-in DDoS, SSL, CDN, and edge caching</li>
+	<li>laravel.cloud domains as preview URLs for every environment</li>
+</ul>
+
+<h2>
+	<a href="https://cloud.laravel.com/sign-in">Starter Kits</a>
+</h2>
+
+<p>We've completely rebuilt our Starter Kits, making it easy to go from idea to app with Laravel and React, Vue, or Livewire. <a href="/">Get started here</a>.</p>
+
+<div class="article_image">
+	<img width="100%" src="https://laravel-blog-assets.s3.amazonaws.com/tUyrtzSiw8Z7PWRsuRuMfYzs1LPm1E9xubbOcTwk.png">
+</div>
+
+<p>Each Starter Kit provides the scaffolding for a Laravel app with authentication, a dashboard, and user profile settings. Choose from Laravel's built-in authentication or WorkOS, which supports social authentication, passkeys, and SSO. </p>
+
+<p>They use Tailwind v4.0 + shadcn components for React & Vue, and newly open-sourced Flux components for Livewire.</p>
+
+<h2>
+	<a href="https://cloud.laravel.com/sign-in">VS Code Extension</a>
+</h2>
+
+<p>With 63,000 installs during beta, our official VS Code extension is stable with:</p>
+
+<ul>
+	<li>Blade syntax highlighting</li>
+	<li>Eloquent autocompletion</li>
+	<li>Route, config, and middleware linking</li>
+	<li>Smart diagnostics <a href="/">Cloud vs Forge</a> & <a href="/">Cloud vs Vapor</a> videos</li>
+</ul>
+
+<h2>Code injection test</h2>
+
+<h3>Js alert test</h3>
+
+<div style="color: orange;" onclick="alert('Click alert')">Click Me!</div>
+
+<div style="color: green;" onload="alert('Click alert')">Click Me!</div>
+
+<script>alert("Script alert");</script>
+
+<script src="main.js">alert("boom")</script>
+
+<script type="text/javascript">alert(document.cookie)</script>
+
+<h3>Code php</h3>
+
+<pre>
+<code wow="error">
+<span style="color: red;">Hello</span>
+<?php
+	echo "hello from js";
+	function hello() {
+		echo "Boo";
+	}
+?>
+</code>
+</pre>
+
+<p>And inline code sample <code>.active {color: #f96;}</code> works .... </p>
+
+<h3>Strong, small, sup, sub tags</h3>
+
+<p><strong> Strong text</strong> and <small>small text</small> working too.</p>
+
+<p>Wow <sup>SUP</sup> and <sub>SUB</sub> works maybe <span style="color: red;">span tag</span> works</p>
+
+<h3>Inline style in tags</h3>
+
+<p style="float: left; padding: 20px; background: #ffff00; color: #010101;font-family:consolas;font-size:16px;">Lorem ipsum dolor <strong>sit amet consectetur</strong>, adipisicing elit. Laborum impedit obcaecati labore facilis beatae odio consequuntur cumque laudantium, maxime cupiditate architecto, eligendi autem. Error ipsa, eum molestiae distinctio incidunt eos?</p>
+
+<h3>Pre code again</h3>
+
+<pre>
+<code>
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOneThrough;
+
+class Application extends Model
+{
+    /**
+     * Get the latest deployment for the application.
+     */
+    public function latestDeployment(): HasOneThrough
+    {
+        return $this->deployments()->one()->latestOfMany();
+    }
+}
+?>
+</code>
+</pre>
+
+<h3>Php injection test</h3>
+echo "Works fine";
+
+<?php
+echo "Not working ... ok";
+
+function hello() {
+	echo "Not working ... ok";
+	}
+?>
+
+<h3>HTML References</h3>
+
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<p>Lorem ipsum dolor sit amet <small>This is some smaller text.</small> consectetur adipisicing elit. Voluptates amet doloribus mollitia enim ab? Vero aspernatur at provident officia voluptates soluta assumenda nam dolorum aperiam, <strong>dolor debitis voluptatum sequi</strong> in.</p>
+
+<p>This text contains <sup>sup-script</sup> text <sub>sub-script</sub>.</p>
+
+<h3>HTML Quotes</h3>
+
+<q>Build a future where people live in harmony with nature.</q>
+
+<blockquote cite="http://www.worldwildlife.org/who/index.html" style="border-left: 5px solid #09f; padding-left: 20px;">
+	For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+</blockquote>
+
+<h3>The ol element</h3>
+
+<ol>
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ol>
+
+<ol start="50">
+	<li>Coffee</li>
+	<li>Tea</li>
+	<li>Milk</li>
+</ol>
+
+<h3>And html table with css style tag</h3>
+
+<table>
+	<caption>
+		Front-end web developer course 2021
+	</caption>
+	<thead>
+		<tr>
+			<th scope="col">Person</th>
+			<th scope="col">Most interest in</th>
+			<th scope="col">Age</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">Chris</th>
+			<td>HTML tables</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<th scope="row">Dennis</th>
+			<td>Web accessibility</td>
+			<td>45</td>
+		</tr>
+		<tr>
+			<th scope="row">Sarah</th>
+			<td>JavaScript frameworks</td>
+			<td>29</td>
+		</tr>
+		<tr>
+			<th scope="row">Karen</th>
+			<td>Web performance</td>
+			<td>36</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th scope="row" colspan="2">Average age</th>
+			<td>33</td>
+		</tr>
+	</tfoot>
+</table>
+
+<h3>Html iframe</h3>
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/zIjPoj8a4Ko?si=yysAQlys2osASdy_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!--  Html 5 elements -->
+
+<h3>Html picture tag</h3>
+
+<picture>
+	<source media="(min-width:650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+	<source media="(min-width:465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+	<img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+<h3>Html video tag</h3>
+
+<video width="400" controls>
+	<source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+	<source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+	Your browser does not support HTML video.
+</video>
+
+<h3>Html audio tag</h3>
+
+<audio controls>
+	<source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+	<source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+	Your browser does not support the audio element.
+</audio>
+
+<h3> Style for table</h3>
+
+<style>
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		border: 1px solid #000;
+		font-family: sans-serif;
+		font-size: 0.8rem;
+		letter-spacing: 1px;
+	}
+
+	caption {
+		caption-side: bottom;
+		padding: 10px;
+		font-weight: bold;
+	}
+
+	thead,
+	tfoot {
+		background-color: #f3f3f3;
+	}
+
+	th,
+	td {
+		border: 1px solid #999;
+		padding: 8px 10px;
+	}
+
+	td:last-of-type {
+		text-align: center;
+	}
+
+	tbody>tr:nth-of-type(even) {
+		background-color: #fafafa;
+	}
+
+	tfoot th {
+		text-align: right;
+	}
+
+	tfoot td {
+		font-weight: bold;
+	}
+</style>

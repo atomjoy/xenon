@@ -1,0 +1,6 @@
+{
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	"name": "Example Corp",
+	"url": "https://example.com"
+}

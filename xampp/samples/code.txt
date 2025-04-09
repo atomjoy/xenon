@@ -1,0 +1,18 @@
+<span style="color: red;">Hello</span>
+<?php
+    echo "hello from js";
+
+    function hello() {
+        echo "Boo";
+    }
+?>
+
+
+<pre><code>&lt;span style=&quot;color: red;&quot;&gt;Hello&lt;/span&gt;
+&lt;?php
+    echo &quot;hello from js&quot;;
+
+    function hello() {
+        echo &quot;Boo&quot;;
+    }
+?&gt;</code></pre>
