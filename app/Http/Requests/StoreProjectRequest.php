@@ -32,7 +32,7 @@ class StoreProjectRequest extends FormRequest
 	{
 		return [
 			'title' => 'required|min:3|max:255',
-			'slug' => 'required|min:3|max:255|unique:services',
+			'slug' => 'required|min:3|max:255|unique:projects',
 			'excerpt' => 'required|min:3|max:255',
 			'content_html' => 'required|min:3|max:65500',
 			'content_cleaned' => 'required|min:3|max:65500',

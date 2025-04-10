@@ -114,6 +114,14 @@ class ServiceController extends Controller
 	{
 		Gate::authorize('delete', $service);
 
+		try {
+			if (Storage::exists($service->image)) {
+				Storage::delete($service->image);
+			}
+		} catch (\Throwable $e) {
+			report($e);
+		}
+
 		$service->delete();
 
 		return response()->json(['message' => 'Deleted']);

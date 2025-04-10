@@ -15,7 +15,7 @@ return new class extends Migration
 			$table->id();
 			$table->string('name');
 			$table->string('company');
-			$table->string('message');
+			$table->text('message');
 			$table->string('image')->nullable();
 			$table->string('website')->nullable();
 			$table->decimal('vote', 2, 1)->nullable()->default(5.0);

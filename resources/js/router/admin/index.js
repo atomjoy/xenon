@@ -47,6 +47,102 @@ const routes = [
 		component: () => import('@/views/admin/settings/Account/DeleteView.vue'),
 		meta: { requiresAdmin: true },
 	},
+	// References
+	{
+		path: '/admin/references/edit',
+		name: 'admin.references.edit',
+		redirect: { name: 'admin.references' },
+	},
+	{
+		path: '/admin/references',
+		name: 'admin.references',
+		component: () => import('@/views/admin/references/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/references/create',
+		name: 'admin.references.create',
+		component: () => import('@/views/admin/references/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/references/edit/:id',
+		name: 'admin.references.edit.id',
+		component: () => import('@/views/admin/references/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	// Employees
+	{
+		path: '/admin/employees/edit',
+		name: 'admin.employees.edit',
+		redirect: { name: 'admin.employees' },
+	},
+	{
+		path: '/admin/employees',
+		name: 'admin.employees',
+		component: () => import('@/views/admin/employees/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/employees/create',
+		name: 'admin.employees.create',
+		component: () => import('@/views/admin/employees/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/employees/edit/:id',
+		name: 'admin.employees.edit.id',
+		component: () => import('@/views/admin/employees/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	// Works
+	{
+		path: '/admin/works/edit',
+		name: 'admin.works.edit',
+		redirect: { name: 'admin.works' },
+	},
+	{
+		path: '/admin/works',
+		name: 'admin.works',
+		component: () => import('@/views/admin/works/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/works/create',
+		name: 'admin.works.create',
+		component: () => import('@/views/admin/works/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/works/edit/:id',
+		name: 'admin.works.edit.id',
+		component: () => import('@/views/admin/works/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	// Questions
+	{
+		path: '/admin/questions/edit',
+		name: 'admin.questions.edit',
+		redirect: { name: 'admin.questions' },
+	},
+	{
+		path: '/admin/questions',
+		name: 'admin.questions',
+		component: () => import('@/views/admin/questions/ListView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/questions/create',
+		name: 'admin.questions.create',
+		component: () => import('@/views/admin/questions/CreateView.vue'),
+		meta: { requiresAdmin: true },
+	},
+	{
+		path: '/admin/questions/edit/:id',
+		name: 'admin.questions.edit.id',
+		component: () => import('@/views/admin/questions/EditView.vue'),
+		meta: { requiresAdmin: true },
+	},
 	// Projects
 	{
 		path: '/admin/projects/edit',

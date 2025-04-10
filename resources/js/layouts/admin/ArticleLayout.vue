@@ -3,6 +3,7 @@ import ChangeTheme from '@/components/utils/ChangeTheme/ChangeThemeStorage.vue';
 import ChangeLocale from '@/components/utils/ChangeLocale/ChangeLocaleStorage.vue';
 import TopMenu from '@/views/page/parts/PageTopMenu.vue';
 import BlogCategories from './parts/BlogCategories.vue';
+import Footer from '@/views/page/parts/Footer.vue';
 import { RouterLink } from 'vue-router';
 
 const props = defineProps({
@@ -41,6 +42,6 @@ const props = defineProps({
 	</div>
 
 	<div class="page_footer">
-		<div class="page_footer_content">{{ $t('2025r. All rights reserved.') }}</div>
+		<Footer />
 	</div>
 </template>

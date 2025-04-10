@@ -30,7 +30,8 @@ class Category extends Model
 		'slug',
 		'about',
 		'image',
-		'category_id'
+		'category_id',
+		'visible',
 	];
 
 	/**

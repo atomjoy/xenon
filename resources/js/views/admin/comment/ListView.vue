@@ -32,6 +32,7 @@ watch(
 					<th scope="col" class="panel_list_title">{{ $t('ID') }}</th>
 					<th scope="col" class="panel_list_title" style="min-width: 50%">{{ $t('Content') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Author') }}</th>
+					<th scope="col" class="panel_list_title">{{ $t('Type') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Approved') }}</th>
 					<th scope="col" class="panel_list_title panel_list_title_last">{{ $t('Action') }}</th>
 				</tr>

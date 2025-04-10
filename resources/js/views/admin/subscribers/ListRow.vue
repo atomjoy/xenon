@@ -10,11 +10,13 @@ const props = defineProps({
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
-	<td>
-		{{ item.email }}
+	<td style="min-width: 40%">
+		<a :href="'mailto:' + item.email" class="panel_list_item_link" target="_blank">
+			{{ item.email }}
+		</a>
 	</td>
 	<td>
 		{{ item.name }}

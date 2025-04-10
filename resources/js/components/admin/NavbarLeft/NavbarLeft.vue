@@ -4,6 +4,10 @@ import IconCategories from '@/assets/icons/IconCategories.vue';
 import IconEdit from '@/assets/icons/IconEdit.vue';
 import IconReply from '@/assets/icons/IconReply.vue';
 import IconAlbum from '@/assets/icons/IconAlbum.vue';
+import IconWork from '@/assets/icons/IconWork.vue';
+import IconEmployee from '@/assets/icons/IconEmployee.vue';
+import IconReference from '@/assets/icons/IconReference.vue';
+import IconQuestion from '@/assets/icons/IconQuestion.vue';
 import IconProject from '@/assets/icons/IconProject.vue';
 import IconContact from '@/assets/icons/IconContact.vue';
 import IconSubscriber from '@/assets/icons/IconSubscriber.vue';
@@ -42,20 +46,36 @@ const store = useAuthStore();
 			</NavbarLink>
 
 			<div class="only_admin" v-if="store.hasRole('worker', 'admin') || store.hasRole('admin', 'admin') || store.hasRole('super_admin', 'admin')">
-				<NavbarLink to="/admin/services" text="Services">
-					<IconService />
+				<NavbarLink to="/admin/contacts" text="Contacts">
+					<IconContact />
 				</NavbarLink>
 
 				<NavbarLink to="/admin/projects" text="Projects">
 					<IconProject />
 				</NavbarLink>
 
-				<NavbarLink to="/admin/contacts" text="Contacts">
-					<IconContact />
+				<NavbarLink to="/admin/services" text="Services">
+					<IconService />
+				</NavbarLink>
+
+				<NavbarLink to="/admin/questions" text="Questions">
+					<IconQuestion />
+				</NavbarLink>
+
+				<NavbarLink to="/admin/employees" text="Employees">
+					<IconEmployee />
+				</NavbarLink>
+
+				<NavbarLink to="/admin/references" text="References">
+					<IconReference />
 				</NavbarLink>
 
 				<NavbarLink to="/admin/subscribers" text="Subscribers">
 					<IconSubscriber />
+				</NavbarLink>
+
+				<NavbarLink to="/admin/works" text="Works">
+					<IconWork />
 				</NavbarLink>
 			</div>
 		</div>

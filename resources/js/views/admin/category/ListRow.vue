@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
 	<td>
@@ -31,6 +31,10 @@ const props = defineProps({
 	<td>
 		{{ item?.parent?.name ?? $t('Yes') }}
 		<span v-if="item?.parent?.id">({{ item?.parent?.id }})</span>
+	</td>
+	<td>
+		<span v-if="item.visible" class="span_btn span_btn_green">{{ $t('visible') }}</span>
+		<span v-if="!item.visible" class="span_btn span_btn_red">{{ $t('hidden') }}</span>
 	</td>
 	<td>
 		<RouterLink class="panel_list_action_link" :to="'/admin/category/edit/' + item.id" :title="$t('Edit')">

@@ -25,6 +25,7 @@ class CategoryFactory extends Factory
 			'about' => ucfirst($name) . ' description',
 			'image' => '/default/category/image.webp',
 			'category_id' => null,
+			'visible' => 1,
 		];
 	}
 }

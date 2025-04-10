@@ -4,6 +4,7 @@ import ChangeLocale from '@/components/utils/ChangeLocale/ChangeLocaleStorage.vu
 import ChangeBg from '@/components/utils/ChangeCss/ChangeBg.vue';
 import TopMenu from '@/views/page/parts/PageTopMenu.vue';
 import BlogCategories from './parts/BlogCategories.vue';
+import Footer from '@/views/page/parts/Footer.vue';
 import { RouterLink } from 'vue-router';
 
 const props = defineProps({
@@ -51,10 +52,6 @@ const props = defineProps({
 	<ChangeBg :image="'/img/get?path=' + props.image" />
 
 	<div class="page_footer">
-		<div class="page_footer_wrapper">
-			<slot name="footer">
-				<div class="page_footer_content">{{ $t('2025r. All rights reserved.') }}</div>
-			</slot>
-		</div>
+		<Footer />
 	</div>
 </template>

@@ -18,6 +18,7 @@ return new class extends Migration
 			$table->string('slug')->unique();
 			$table->text('about')->nullable();
 			$table->string('image')->nullable();
+			$table->boolean('visible')->nullable()->default(0);
 			$table->timestamps();
 			$table->foreign('category_id')->references('id')->on('categories')->onUpdate('cascade')->onDelete('set null');
 		});

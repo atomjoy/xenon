@@ -35,6 +35,7 @@ class StoreCategoryRequest extends FormRequest
 			'slug' => 'required|min:2|max:255|unique:categories',
 			'about' => 'sometimes|min:3',
 			'category_id' => 'sometimes|nullable|exists:categories,id',
+			'visible' => 'sometimes|boolean',
 			'image' => [
 				'sometimes',
 				'mimes:webp,jpeg,jpg,png,gif',
@@ -55,6 +56,7 @@ class StoreCategoryRequest extends FormRequest
 		$this->merge([
 			'slug' => Str::slug($this->slug, '-'),
 			'category_id' => $this->category_id == 'null' ? null : (int) $this->category_id,
+			'visible' => $this->visible == 1 ? 1 : 0,
 		]);
 	}
 }

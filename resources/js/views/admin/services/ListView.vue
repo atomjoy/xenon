@@ -33,7 +33,7 @@ watch(
 					<th scope="col" class="panel_list_title">{{ $t('ID') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Image') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Title') }}</th>
-					<th scope="col" class="panel_list_title">{{ $t('Tags') }}</th>
+					<th scope="col" class="panel_list_title" style="min-width: 40%">{{ $t('Tags') }}</th>
 					<th scope="col" class="panel_list_title panel_list_title_last">{{ $t('Action') }}</th>
 				</tr>
 

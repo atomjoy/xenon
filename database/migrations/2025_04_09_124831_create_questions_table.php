@@ -14,7 +14,7 @@ return new class extends Migration
 		Schema::create('questions', function (Blueprint $table) {
 			$table->id();
 			$table->string('message');
-			$table->string('answer');
+			$table->text('answer');
 			$table->json('meta_seo')->nullable();
 			$table->json('schema_seo')->nullable();
 			$table->timestamp('published_at')->nullable();

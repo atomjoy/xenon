@@ -15,12 +15,12 @@ return new class extends Migration
 			$table->id();
 			$table->string('name');
 			$table->string('position');
-			$table->string('excerpt');
 			$table->string('slug')->nullable()->unique();
 			$table->string('email')->nullable();
 			$table->string('mobile')->nullable();
 			$table->string('experience')->nullable();
 			$table->string('image')->nullable();
+			$table->string('excerpt')->nullable();
 			$table->text('content_html')->nullable();
 			$table->text('content_cleaned')->nullable();
 			$table->string('facebook')->nullable();

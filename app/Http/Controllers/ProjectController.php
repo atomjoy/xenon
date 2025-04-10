@@ -114,6 +114,14 @@ class ProjectController extends Controller
 	{
 		Gate::authorize('delete', $project);
 
+		try {
+			if (Storage::exists($project->image)) {
+				Storage::delete($project->image);
+			}
+		} catch (\Throwable $e) {
+			report($e);
+		}
+
 		$project->delete();
 
 		return response()->json(['message' => 'Deleted']);

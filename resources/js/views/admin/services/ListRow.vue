@@ -12,7 +12,7 @@ const tags = props.item.tags.split(',') ?? [];
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
 	<td>
@@ -25,7 +25,7 @@ const tags = props.item.tags.split(',') ?? [];
 			{{ item.title }}
 		</a>
 	</td>
-	<td>
+	<td style="min-width: 40%">
 		<span class="panel_list_tag" v-for="i in tags">{{ i }}</span>
 	</td>
 	<td>

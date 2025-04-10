@@ -48,6 +48,16 @@ function onSubmit(e) {
 
 				<Label text="Subcategory for" />
 				<Select name="category_id" v-model="store.category.category_id" :options="store.category_main" />
+
+				<Label text="Visibility" />
+				<Select
+					name="visible"
+					v-model="store.category.visible"
+					:options="[
+						{ id: 1, name: $t('Yes') },
+						{ id: 0, name: $t('No') },
+					]"
+				/>
 				<Button text="Update" class="settings_button" />
 			</form>
 		</Group>

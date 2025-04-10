@@ -10,20 +10,18 @@ const props = defineProps({
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
 	<td style="min-width: 50%">
-		<div class="panel_list_comment_content">
-			{{ item.content }}
-		</div>
+		<a :href="'/admin/article/' + item.article.slug" class="panel_list_item_link" target="_blank"> {{ item.content.substr(0, 100) }} ... </a>
 	</td>
 	<td>
-		<a :href="'/admin/article/' + item.article.slug" target="_blank">
-			<span class="span_author" :title="'ID:' + item.author.id + ' IP: ' + item.ip_address + ' Article: ' + item.article.title">{{ item.author.name }}</span>
-		</a>
-		<span v-if="item.commentable_type == 'App\\Models\\Admin'" class="span_btn">{{ $t('Author') }}</span>
-		<span v-if="item.commentable_type == 'App\\Models\\User'" class="span_btn">{{ $t('Client') }}</span>
+		<span :title="'ID:' + item.author.id + ' IP: ' + item.ip_address + ' Article: ' + item.article.title">{{ item.author.name }}</span>
+	</td>
+	<td>
+		<span v-if="item.commentable_type == 'App\\Models\\Admin'" class="panel_list_tag">{{ $t('Author') }}</span>
+		<span v-if="item.commentable_type == 'App\\Models\\User'" class="panel_list_tag">{{ $t('Client') }}</span>
 	</td>
 	<td>
 		<span v-if="item.is_approved" class="span_btn span_btn_green">{{ $t('approved') }}</span>

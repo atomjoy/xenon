@@ -6,10 +6,11 @@ import Input from '@/components/auth/Input.vue';
 import Select from '@/components/auth/Select.vue';
 import Textarea from '@/components/auth/Textarea.vue';
 import Button from '@/components/auth/Button.vue';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useCategoryStore } from '@/stores/category.js';
 
 const store = useCategoryStore();
+const visible = ref(1);
 
 onMounted(async () => {
 	store.clearError();
@@ -36,6 +37,15 @@ onMounted(async () => {
 				</div>
 				<Label text="Subcategory for" />
 				<Select name="category_id" v-model="store.category" :options="store.category_main" />
+				<Label text="Visibility" />
+				<Select
+					name="visible"
+					v-model="visible"
+					:options="[
+						{ id: 1, name: $t('Yes') },
+						{ id: 0, name: $t('No') },
+					]"
+				/>
 				<Button text="Create" class="settings_button" />
 			</form>
 		</Group>

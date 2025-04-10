@@ -58,8 +58,7 @@ function next() {
 	<CategoryLayout :title="item.name" :description="item.about" :image="item.image">
 		<div class="blog_list">
 			<div class="empty_list">
-				<h2 v-if="!item.slug">{{ $t('Invalid category name.') }}</h2>
-				<p v-if="!item.slug">{{ $t('The list is empty.') }}</p>
+				<p v-if="item.articles?.data.length == 0">{{ $t('The list is empty.') }}</p>
 			</div>
 
 			<div class="blog_article_small" v-for="article in item.articles?.data">

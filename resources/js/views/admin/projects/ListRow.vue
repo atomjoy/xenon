@@ -12,7 +12,7 @@ const tags = props.item.tags.split(',') ?? [];
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
 	<td>

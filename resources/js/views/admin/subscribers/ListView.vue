@@ -30,7 +30,7 @@ watch(
 			<table class="panel_table_list">
 				<tr class="panel_list_header">
 					<th scope="col" class="panel_list_title">{{ $t('ID') }}</th>
-					<th scope="col" class="panel_list_title">{{ $t('Email') }}</th>
+					<th scope="col" class="panel_list_title" style="min-width: 40%">{{ $t('Email') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Name') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Approved') }}</th>
 					<th scope="col" class="panel_list_title panel_list_title_last">{{ $t('Action') }}</th>

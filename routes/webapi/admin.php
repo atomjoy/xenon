@@ -14,10 +14,14 @@ use App\Http\Controllers\ArticleMediaController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ReferenceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\WorkController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -87,7 +91,6 @@ Route::prefix('web/api/admin')->name('web.api.admin')->middleware([
 		// Subscribe
 		Route::resource('subscribers', SubscriberController::class)->except(['create', 'edit']);
 		Route::get('subscribers/export/csv', [SubscriberController::class, 'csv']);
-
 		// Contact
 		Route::resource('contacts', ContactController::class)->except(['create', 'edit', 'store']);
 		Route::get('contacts/export/file', [ContactController::class, 'download']);
@@ -97,7 +100,16 @@ Route::prefix('web/api/admin')->name('web.api.admin')->middleware([
 		// Project
 		Route::resource('projects', ProjectController::class)->except(['create', 'edit']);
 		Route::get('projects/remove/{project}', [ProjectController::class, 'remove']);
-
+		// Employee
+		Route::resource('employees', EmployeeController::class)->except(['create', 'edit']);
+		Route::get('employees/remove/{employee}', [EmployeeController::class, 'remove']);
+		// Reference
+		Route::resource('references', ReferenceController::class)->except(['create', 'edit']);
+		Route::get('references/remove/{reference}', [ReferenceController::class, 'remove']);
+		// Question
+		Route::resource('questions', QuestionController::class)->except(['create', 'edit']);
+		// Work
+		Route::resource('works', WorkController::class)->except(['create', 'edit']);
 
 		Route::get('/only-worker', function () {
 			return response()->json([

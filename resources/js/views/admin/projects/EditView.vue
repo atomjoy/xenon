@@ -40,7 +40,7 @@ function setSchemaSeo() {
 
 <template>
 	<Layout :message="store.getMessage" :error="store.getError" :edit="true">
-		<Group title="Update service" desc="Here you can edit the service.">
+		<Group title="Update project" desc="Here you can edit the project.">
 			<form action="post" @submit.prevent="onSubmit" enctype="multipart/form-data">
 				<Label text="Title" />
 				<Input name="title" v-model="store.item.title" />

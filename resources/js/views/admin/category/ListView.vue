@@ -33,6 +33,7 @@ watch(
 					<th scope="col" class="panel_list_title">{{ $t('Category') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Slug') }}</th>
 					<th scope="col" class="panel_list_title">{{ $t('Parent') }}</th>
+					<th scope="col" class="panel_list_title">{{ $t('Status') }}</th>
 					<th scope="col" class="panel_list_title panel_list_title_last">{{ $t('Action') }}</th>
 				</tr>
 

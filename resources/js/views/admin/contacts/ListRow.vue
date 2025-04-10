@@ -10,18 +10,24 @@ const props = defineProps({
 </script>
 
 <template>
-	<td>
+	<td class="panel_list_title">
 		<span class="panel_list_col_id">{{ item.id }}</span>
-	</td>
-	<td>{{ item.firstname }} {{ item.lastname }}</td>
-	<td>
-		{{ item.email }}
-	</td>
-	<td>
-		{{ item.mobile }}
 	</td>
 	<td>
 		{{ item.subject }}
+	</td>
+	<td>{{ item.firstname }} {{ item.lastname }}</td>
+	<td>
+		<div>
+			<a :href="'mailto:' + item.email" class="panel_list_item_link" target="_blank">
+				{{ item.email }}
+			</a>
+		</div>
+		<div>
+			<a :href="'tel:' + item.mobile" class="panel_list_item_link" target="_blank">
+				{{ item.mobile }}
+			</a>
+		</div>
 	</td>
 	<td>
 		<RouterLink class="panel_list_action_link" :to="'/admin/contacts/edit/' + item.id" :title="$t('Edit')">

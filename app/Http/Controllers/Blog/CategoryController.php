@@ -16,7 +16,9 @@ class CategoryController extends Controller
 		$perpage = request()->integer('perpage', default: 9);
 
 		return CategoryResource::collection(
-			Category::latest('id')->paginate($perpage)
+			Category::where('visible', 1)
+				->whereNull('category_id')
+				->paginate($perpage)
 		);
 	}
 
