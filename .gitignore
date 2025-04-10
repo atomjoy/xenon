@@ -21,3 +21,4 @@ yarn-error.log
 /.nova
 /.zed
 /public_html
+!/storage/app/public
