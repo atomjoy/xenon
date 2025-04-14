@@ -1,6 +1,7 @@
 <script setup>
 import Layout from './parts/Layout.vue';
 import Group from './parts/Group.vue';
+import job from '@/utils/job.js';
 import Label from '@/components/auth/Label.vue';
 import Input from '@/components/auth/Input.vue';
 import Select from '@/components/auth/SelectMulti.vue';
@@ -10,6 +11,7 @@ import { onMounted, ref } from 'vue';
 import { useItemStore } from '@/stores/work.js';
 
 const store = useItemStore();
+const jobhtml = ref('');
 
 onMounted(async () => {
 	store.clearError();
@@ -39,7 +41,8 @@ onMounted(async () => {
 				<Input name="salary" />
 
 				<Label text="Content (Html)" />
-				<Textarea name="content_html" />
+				<Textarea name="content_html" v-model="jobhtml" />
+				<div class="panel_load_seo" @click="jobhtml = job">{{ $t('Load sample') }}</div>
 
 				<Label text="Publish at" />
 				<Input name="published_at" placeholder="YYYY-MM-DD HH:MM:SS" />

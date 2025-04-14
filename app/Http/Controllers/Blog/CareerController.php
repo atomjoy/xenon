@@ -2,13 +2,33 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Models\Work;
 use App\Models\Contact;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\WorkCollection;
 use App\Http\Requests\StoreCareerRequest;
 use Illuminate\Support\Facades\Storage;
 
 class CareerController extends Controller
 {
+	/**
+	 * Get items.
+	 */
+	public function index()
+	{
+		$perpage = request()->integer('perpage', default: 6);
+
+		return new WorkCollection(Work::latest('id')->paginate($perpage));
+	}
+
+	/**
+	 * Get item.
+	 */
+	public function show(Work $work)
+	{
+		return $work;
+	}
+
 	/**
 	 * Store a newly created resource in storage.
 	 */

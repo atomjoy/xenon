@@ -1,15 +1,16 @@
 <script setup>
 import { ref } from 'vue';
 import company from '@/settings/company.json';
+import scrollTo from '@/utils/scrollTo.js';
 import ErrorMessage from './ErrorMessage.vue';
-import scrollTop from '@/utils/scrollTop.js';
+import Button from './items/Button.vue';
 
 const form = ref(null);
 const error = ref(false);
 const message = ref(null);
 
 async function onSubmit(e) {
-	scrollTop();
+	scrollTo();
 	error.value = false;
 	try {
 		const data = new FormData(e.target);
@@ -23,12 +24,14 @@ async function onSubmit(e) {
 }
 </script>
 <template>
-	<div class="page_contact">
+	<div class="page_contact" id="contacts">
 		<p class="page_contact_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Contact Us') }}</p>
 		<h1>
 			{{ $t('Join Us in Creating') }} <br />
 			{{ $t('Something Great') }}
 		</h1>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum dolores, excepturi pariatur, perferendis consequuntur architecto nemo labore quae minus ea eum velit fugit exercitationem assumenda impedit natus reiciendis quidem!</p>
 
 		<ErrorMessage :error="error" :message="message" />
 
@@ -52,10 +55,7 @@ async function onSubmit(e) {
 
 				<input type="file" class="input" name="file" />
 
-				<button class="page_cool_btn">
-					<span>{{ $t('Send Message') }}</span>
-					<i class="fa-solid fa-arrow-right"></i>
-				</button>
+				<Button name="Send Message" />
 			</form>
 		</div>
 

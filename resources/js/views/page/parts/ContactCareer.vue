@@ -2,14 +2,15 @@
 import { ref } from 'vue';
 import company from '@/settings/company.json';
 import ErrorMessage from './ErrorMessage.vue';
-import scrollTop from '@/utils/scrollTop.js';
+import scrollTo from '@/utils/scrollTo.js';
+import Button from './items/Button.vue';
 
 const form = ref(null);
 const error = ref(false);
 const message = ref(null);
 
 async function onSubmit(e) {
-	scrollTop();
+	scrollTo();
 	error.value = false;
 	try {
 		const data = new FormData(e.target);
@@ -23,7 +24,7 @@ async function onSubmit(e) {
 }
 </script>
 <template>
-	<div class="page_contact">
+	<div class="page_contact" id="contacts">
 		<p class="page_contact_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Career Inquiries') }}</p>
 		<h1>
 			{{ $t('Feel Free to Contact Us') }}
@@ -43,7 +44,7 @@ async function onSubmit(e) {
 					<input type="text" class="input" name="mobile" :placeholder="$t('Phone Number')" />
 				</div>
 
-				<input type="text" class="input" name="subject" :placeholder="$t('Subject')" />
+				<input id="apply_subject" type="text" class="input" name="subject" :placeholder="$t('Subject')" />
 
 				<textarea name="message" class="input" :placeholder="$t('Message')"></textarea>
 
@@ -51,10 +52,7 @@ async function onSubmit(e) {
 
 				<input type="file" class="input" name="file" />
 
-				<button class="page_cool_btn">
-					<span>{{ $t('Send Message') }}</span>
-					<i class="fa-solid fa-arrow-right"></i>
-				</button>
+				<Button name="Apply Now" />
 			</form>
 		</div>
 

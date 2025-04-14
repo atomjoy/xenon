@@ -27,7 +27,7 @@ const props = defineProps({
 	</div>
 
 	<div class="page_content">
-		<ScrollBar />
+		<!-- <ScrollBar /> -->
 		<div class="page_content_wrapper">
 			<slot />
 		</div>

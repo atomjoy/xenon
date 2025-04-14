@@ -1,0 +1,103 @@
+{
+	"@context": "https://schema.org",
+	"@type": "Corporation",
+	"@id": "https://www.bcg.com/#corporation",
+	"name": "Boston Consulting Group",
+	"description": "Boston Consulting Group is a global consulting firm that partners with leaders in business and society to tackle their most important challenges and capture their greatest opportunities. Our success depends on a spirit of deep collaboration and a global community of diverse individuals determined to make the world and each other better every day.",
+	"url": "https://www.bcg.com",
+	"logo": {
+		"@type": "ImageObject",
+		"url": "https://web-assets.bcg.com/dims4/default/2493c6b/2147483647/strip/true/crop/746x501+0+0/resize/1492x1002!/format/webp/quality/90/?url=http%3A%2F%2Fboston-consulting-group-brightspot.s3.amazonaws.com%2F65%2F46%2Fd6769bfd46abd4021e2c6727f508%2Fbcg-monogram-rgb-green-tcm9-210235.png"
+	},
+	"sameAs": [
+		"https://www.linkedin.com/company/boston-consulting-group",
+		{
+			"@context": "https://schema.org",
+			"@type": "Corporation",
+			"@id": "https://www.bcg.com/#corporation",
+			"name": "Boston Consulting Group",
+			"description": "Boston Consulting Group is a global consulting firm that partners with leaders in business and society to tackle their most important challenges and capture their greatest opportunities. Our success depends on a spirit of deep collaboration and a global community of diverse individuals determined to make the world and each other better every day.",
+			"url": "https://www.bcg.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://web-assets.bcg.com/dims4/default/2493c6b/2147483647/strip/true/crop/746x501+0+0/resize/1492x1002!/format/webp/quality/90/?url=http%3A%2F%2Fboston-consulting-group-brightspot.s3.amazonaws.com%2F65%2F46%2Fd6769bfd46abd4021e2c6727f508%2Fbcg-monogram-rgb-green-tcm9-210235.png"
+			},
+			"sameAs": [
+				"https://www.linkedin.com/company/boston-consulting-group",
+				"https://www.facebook.com/BostonConsultingGroup",
+				"https://twitter.com/BCG",
+				"https://www.youtube.com/user/TheBCGVideo"
+			],
+			"department": [
+				{
+					"@type": "Organization",
+					"name": "BCG in Africa",
+					"url": "https://www.bcg.com/offices/cairo",
+					"@id": "https://www.bcg.com/offices/cairo/#organization",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "F4, First Floor, Building H, 5! by Waterway",
+						"addressLocality": "New Cairo",
+						"addressRegion": "Cairo",
+						"addressCountry": "Egypt"
+					}
+				},
+				{
+					"@type": "Organization",
+					"name": "BCG in Miami",
+					"url": "https://www.bcg.com/offices/miami/default",
+					"@id": "https://www.bcg.com/offices/miami/default/#organization",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "1450 Brickell Avenue, 34th Floor",
+						"addressLocality": "Miami",
+						"addressRegion": "Florida",
+						"addressCountry": "United States"
+					}
+				},
+				{
+					"@type": "Organization",
+					"name": "BCG in Sydney",
+					"url": "https://www.bcg.com/offices/sydney/default",
+					"@id": "https://www.bcg.com/offices/sydney/default/#organization",
+					"address": {
+						"@type": "PostalAddress",
+						"streetAddress": "Level 26, 60 Martin Place",
+						"addressLocality": "Sydney",
+						"addressRegion": "NSW",
+						"addressCountry": "Australia"
+					},
+					"telephone": "61293235600",
+					"contactPoint": {
+						"@type": "contactPoint",
+						"contactType": "Office Administrator",
+						"name": "Chris Mattey",
+						"url": "https://www.bcg.com/about/people/experts/chris-mattey",
+						"sameAs": "https://www.linkedin.com/in/chris-mattey-193aa81/"
+					}
+				}
+			],
+			"knowsAbout": [
+				{
+					"@type": "DefinedTerm",
+					"name": "business strategy",
+					"@id": "https://www.wikidata.org/wiki/Q20014942"
+				},
+				{
+					"@type": "DefinedTerm",
+					"name": "business transformation",
+					"@id": "https://www.wikidata.org/wiki/Q5001958"
+				},
+				{
+					"@type": "DefinedTerm",
+					"name": "corporate finance",
+					"@id": "https://www.wikidata.org/wiki/Q1134763"
+				}
+			],
+			"founder": {
+				"@type": "Person",
+				"name": "Bruce Henderson"
+			}
+		}
+	]
+}

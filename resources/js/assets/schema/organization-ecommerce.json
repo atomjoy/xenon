@@ -1,0 +1,25 @@
+{
+	"@context": "https://schema.org",
+	"@type": "OnlineBusiness",
+	"name": "Pet Circle",
+	"legalName": "Millell Pty Ltd",
+	"description": "Pet Circle is Australia's largest online pet shop. We're focused on bettering the lives of pets and pet parents alike! We're here to make shopping for pet supplies as easy and convenient as possible. There's a reason over 700,000 pet parents trust us - we're committed to providing awesome customer service, fast shipping, and free, personalised advice from Pet Circle's online vet team! We also support our community by donating food and supplies to more than 100 animal rescue organisations. We stock a great range of animal supplies for your pet's well-being including: dog harnesses, collars, toys, treats, dog beds, dog crates, cat litter and cat flea collars. Everything from cat carriers, right through to dog nail clippers to care for your pets. We've got speciality species covered too! We stock a wide range of fish tanks and aquariums, air pumps, bird cages, bird supplies, reptile, rabbit and horse products. Pet Circle also offers the best vet products online such as flea, tick and worming treatments from leading brands like: NexGard Spectra, Simparica Trio, Bravecto, Sentinel and Revolution Plus. As well as vet diets from Hill's Prescription Diet and Royal Canin Vet Diet. Let's Pet Better, together!",
+	"url": "https://www.petcircle.com.au",
+	"@id": "https://www.petcircle.com.au/#organization",
+	"areaServed": {
+		"@type": "Country",
+		"name": "Australia"
+	},
+	"sameAs": [
+		"https://www.facebook.com/petcircle.aus",
+		"https://instagram.com/petcircle?ref=badge",
+		"https://www.youtube.com/user/petcircleau",
+		"https://www.linkedin.com/company/petcircle/"
+	],
+	"hasMerchantReturnPolicy": {
+		"@type": "MerchantReturnPolicy",
+		"applicableCountry": "AU",
+		"merchantReturnLink": "https://www.petcircle.com.au/returns-policy"
+	},
+	"ethicsPolicy": "https://www.petcircle.com.au/petcircle-assets/content/static-pages-policy/Pet_Circle_Whistle_Blower_Policy_2023.pdf"
+}

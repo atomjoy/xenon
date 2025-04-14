@@ -1,0 +1,29 @@
+{
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Burnt Toast",
+	"alternateName": [
+		"BT",
+		"B-T",
+		"Burnt Toast Shop",
+		"example.com"
+	],
+	"url": "https://www.example.com/",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": "http://example.com/search?&q={query}",
+		"query": "required"
+	},
+	"publisher": {
+		"@type": "Organization",
+		"name": "BTS",
+		"legalName": "Burnt Toast Shop Limited",
+		"url": "https://www.bts.com/",
+		"@id": "https://www.bts.com/",
+		"sameAs": [
+			"https://business.gov/bts-example/View/123456",
+			"https://www.facebook.com/BTS-Example",
+			"https://www.x.com/BTS-Example"
+		]
+	}
+}

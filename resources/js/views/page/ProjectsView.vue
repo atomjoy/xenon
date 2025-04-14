@@ -2,23 +2,22 @@
 import ChangeDescription from '@/components/utils/ChangeDescription/ChangeDescription.vue';
 import ChangeTitle from '@/components/utils/ChangeTitle/ChangeTitle.vue';
 import Layout from '@/layouts/page/DefaultLayout.vue';
+import Projects from './parts/Projects.vue';
 import AddSchema from '@/components/utils/Html/AddSchema.vue';
 import AddMeta from '@/components/utils/Html/AddMeta.vue';
-import { onMounted } from 'vue';
-import { RouterLink } from 'vue-router';
-
-onMounted(async () => {});
 </script>
 
 <template>
-	<Layout title="Projects" description="Our latest projects."> Projects page </Layout>
+	<Layout title="Projects" description="Our projects.">
+		<Projects />
+	</Layout>
 
 	<!-- Seo header meta -->
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
 	<ChangeTitle :title="$t('Projects')" />
-	<ChangeDescription :description="$t('Our latest projects.')" />
+	<ChangeDescription :description="$t('Our projects.')" />
 </template>
 
 <style>

@@ -23,7 +23,7 @@ const props = defineProps({
 	content: {
 		default: `
     <div class="iwx">
-      <div class="iwx-logo"><img src="https://app.test/default/logo/logo-light.png"></div>
+      <div class="iwx-logo"><img src="${company.map_logo}"></div>
       <div class="map_text map_company">${company.name}</div>
       <div class="map_text map_city">${company.city}</div>
       <div class="map_text map_street">${company.street}</div>

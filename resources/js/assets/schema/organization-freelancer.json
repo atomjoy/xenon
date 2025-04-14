@@ -1,0 +1,35 @@
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Caitlin Wright",
+	"url": "https://caitlinwright.com.au",
+	"@id": "https://caitlinwright.com.au/#organization",
+	"description": "I'm an award winning website copywriter, freelance journalist and online editor. I have spent my career working for companies like 7News, Skype and Medical Journal of Australia.",
+	"founder": {
+		"@type": "Person",
+		"name": "Caitlin Wright",
+		"sameAs": [
+			"https://www.linkedin.com/in/wrightcaitlin/",
+			"https://instagram.com/caitlinjwright",
+			"https://twitter.com/caitliniswright"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://caitlinwright.com.au/wp-content/uploads/2021/11/caitlinwright-contact.png"
+		},
+		"knowsAbout": [
+			{
+				"@type": "DefinedTerm",
+				"name": "copywriting",
+				"@id": "https://www.wikidata.org/wiki/Q624896"
+			},
+			{
+				"@type": "DefinedTerm",
+				"name": "journalism",
+				"@id": "https://www.wikidata.org/wiki/Q11030"
+			}
+		]
+	},
+	"email": "caitlin@caitlinwright.com.au",
+	"telephone": "61401236466"
+}

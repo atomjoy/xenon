@@ -1,0 +1,76 @@
+{
+	"@context": "https://schema.org",
+	"@type": "NewsMediaOrganization",
+	"url": "https://sitchu.com.au",
+	"@id": "https://sitchu.com.au/#organisation",
+	"name": "Sitchu",
+	"description": "From city guides and weekends away to beautiful home design and stylish properties to buy, we bring you the best of food, travel, lifestyle and interiors, so you can explore Australia's sought-after suburbs just like a local.",
+	"sameAs": "https://www.pinterest.com.au/sitchuau",
+	"brand": [
+		{
+			"@type": "NewsMediaOrganization",
+			"name": "Sitchu Sydney",
+			"url": "https://sitchu.com.au/sydney",
+			"@id": "https://sitchu.com.au/sydney/#organisation",
+			"sameAs": [
+				"https://www.facebook.com/sitchusydney",
+				"https://www.facebook.com/sitchusydney"
+			],
+			"knowsAbout": [
+				{
+					"@type": "Place",
+					"@id": "https://www.wikidata.org/wiki/Q3130",
+					"name": "Sydney"
+				},
+				{
+					"@type": "Thing",
+					"@id": "https://www.wikidata.org/wiki/Q30915455",
+					"name": "casual dining"
+				}
+			]
+		},
+		{
+			"@type": "NewsMediaOrganization",
+			"name": "Sitchu Melbourne",
+			"url": "https://sitchu.com.au/melbourne",
+			"@id": "https://sitchu.com.au/melbourne/#organisation",
+			"sameAs": [
+				"https://www.facebook.com/sitchumelbourne",
+				"https://www.instagram.com/sitchu.melbourne"
+			],
+			"knowsAbout": [
+				{
+					"@type": "Place",
+					"@id": "https://www.wikidata.org/wiki/Q3141",
+					"name": "Melbourne"
+				},
+				{
+					"@type": "Thing",
+					"@id": "https://www.wikidata.org/wiki/Q30915455",
+					"name": "casual dining"
+				}
+			]
+		},
+		{
+			"@type": "NewsMediaOrganization",
+			"name": "Sitchu Brisbane",
+			"url": "https://sitchu.com.au/brisbane",
+			"@id": "https://sitchu.com.au/brisbane/#organisation",
+			"sameAs": [
+				"https://www.facebook.com/sitchubrisbane",
+				"https://www.instagram.com/sitchu.brisbane"
+			],
+			"knowsAbout": {
+				"@type": "Place",
+				"@id": "https://www.wikidata.org/wiki/Q34932",
+				"name": "Brisbane"
+			}
+		}
+	],
+	"parentOrganization": {
+		"@type": "Organization",
+		"name": "Belle Property",
+		"url": "https://www.belleproperty.com/",
+		"@id": "https://www.wikidata.org/wiki/Q104721339"
+	}
+}

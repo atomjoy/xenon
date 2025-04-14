@@ -44,6 +44,7 @@ class UpdateWorkRequest extends FormRequest
 			'meta_seo' => 'sometimes|json',
 			'schema_seo' => 'sometimes|json',
 			'published_at' => 'required|date_format:Y-m-d H:i:s',
+			'expired_at' => 'sometimes|date_format:Y-m-d H:i:s',
 		];
 	}
 

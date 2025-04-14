@@ -66,6 +66,9 @@ function setSchemaSeo() {
 				<Label text="Tags (coma separated)" />
 				<Input name="tags" v-model="store.item.tags" />
 
+				<Label text="Icon" />
+				<Input name="icon" v-model="store.item.icon" />
+
 				<Label text="Meta tags (Array with json or empty array)" />
 				<Textarea class="meta_seo" name="meta_seo" v-model="store.item.meta_seo" :placeholder="'[]'" />
 				<div class="panel_load_seo" @click="setMetaSeo">{{ $t('Load sample') }}</div>

@@ -23,6 +23,8 @@ function toggle() {
 				<RouterLink to="/blog">{{ $t('Blog') }}</RouterLink>
 				<RouterLink to="/projects">{{ $t('Projects') }}</RouterLink>
 				<RouterLink to="/services">{{ $t('Services') }}</RouterLink>
+				<RouterLink to="/team">{{ $t('Team') }}</RouterLink>
+				<RouterLink to="/career">{{ $t('Career') }}</RouterLink>
 				<RouterLink to="/contact">{{ $t('Contact') }}</RouterLink>
 				<RouterLink to="/login">{{ $t('Login') }}</RouterLink>
 			</nav>

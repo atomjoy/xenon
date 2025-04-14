@@ -1,6 +1,6 @@
 <script setup>
 import meta_seo from '@/utils/seo/seo_meta.js';
-import schema_seo from '@/utils/seo/seo_schema.js';
+import schema_seo from '@/utils/seo/seo_schema_job.js';
 import Layout from './parts/Layout.vue';
 import Group from './parts/Group.vue';
 import Label from '@/components/auth/Label.vue';
@@ -75,6 +75,9 @@ function setSchemaSeo() {
 
 				<Label text="Publish at" />
 				<Input name="published_at" v-model="store.item.published_at" placeholder="YYYY-MM-DD HH:MM:SS" />
+
+				<Label text="Expires at" />
+				<Input name="expired_at" v-model="store.item.expired_at" placeholder="YYYY-MM-DD HH:MM:SS" />
 
 				<Button text="Update" class="settings_button" />
 			</form>

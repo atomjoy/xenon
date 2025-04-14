@@ -29,6 +29,8 @@ onMounted(async () => {
 				<Textarea name="excerpt" />
 				<Label text="Content (Html)" />
 				<Textarea name="content_html" />
+				<Label text="Icon" />
+				<Input name="icon" />
 				<Label text="Image" />
 				<Input type="file" name="image" @change="store.getImagePath" />
 				<div class="panel_item_image" v-if="store.item_image">

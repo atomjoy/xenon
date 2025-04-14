@@ -37,7 +37,8 @@ class StoreServiceRequest extends FormRequest
 			'content_html' => 'required|min:3|max:65500',
 			'content_cleaned' => 'required|min:3|max:65500',
 			'image' => 'sometimes|image|mimes:jpg,jpeg,png,gif,webp|max:4096',
-			'tags' => 'sometimes|min:2|max:255',
+			'tags' => 'sometimes|max:255',
+			'icon' => 'sometimes|max:255',
 			'published_at' => 'required|date_format:Y-m-d H:i:s',
 		];
 	}

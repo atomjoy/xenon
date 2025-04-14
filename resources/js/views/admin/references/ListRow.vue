@@ -14,12 +14,12 @@ const props = defineProps({
 		<span class="panel_list_col_id">{{ item.id }}</span>
 	</td>
 	<td>
-		<a :href="'/references'" class="panel_list_item_link" target="_blank">
+		<a :href="'/testimonials/' + item.id" class="panel_list_item_link" target="_blank">
 			<img class="panel_list_avatar" :src="'/img/show?path=' + item.image" onerror="this.remove()" />
 		</a>
 	</td>
 	<td>
-		<a :href="'/references'" class="panel_list_item_link" target="_blank">
+		<a :href="'/testimonials/' + item.id" class="panel_list_item_link" target="_blank">
 			{{ item.name }}
 		</a>
 	</td>

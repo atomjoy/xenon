@@ -1,0 +1,31 @@
+{
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	"name": "Questions about the Structured Data Viewer",
+	"mainEntity": [
+		{
+			"@type": "Question",
+			"name": "📜 What formats are supported?",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>At the moment the tool can read JSON-LD and Microdata. If there is enough demand I plan to add other formats like RDFaLite, microformat and meta tag base markup like Open Graph.,</p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "📝 What vocabularies are supported",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>The tool will show data from all vocabularies but it currently only supports validating schema.org. There are plans to add other vocabularies if there is demand.</p>"
+			}
+		},
+		{
+			"@type": "Question",
+			"name": "🔎 Is Google supported",
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": "<p>At this time there is no special validation to check if the structured data passes Googles own guidelines. The Rich results tester (RRT) is the best toll for that at this time. I do have plans to add further validations for system like Google Search, Google Merchant Centre, Facebook, Twitter, Pinterest etc.</p>"
+			}
+		}
+	]
+}

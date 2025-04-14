@@ -76,6 +76,9 @@ async function subscribe() {
 						<RouterLink to="/career" :title="$t('Career')">{{ $t('Careers') }}</RouterLink>
 					</div>
 					<div class="page_footer_link">
+						<RouterLink to="/testimonials" :title="$t('Testimonials')">{{ $t('Testimonials') }}</RouterLink>
+					</div>
+					<div class="page_footer_link">
 						<RouterLink to="/faq" :title="$t('FAQs')">{{ $t('FAQs') }}</RouterLink>
 					</div>
 				</div>

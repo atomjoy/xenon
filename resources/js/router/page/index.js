@@ -28,6 +28,21 @@ const routes = [
 		name: 'career',
 		component: () => import('@/views/page/CareerView.vue'),
 	},
+	{
+		path: '/team',
+		name: 'team',
+		component: () => import('@/views/page/TeamView.vue'),
+	},
+	{
+		path: '/faq',
+		name: 'faq',
+		component: () => import('@/views/page/QuestionsView.vue'),
+	},
+	{
+		path: '/testimonials',
+		name: 'testimonials',
+		component: () => import('@/views/page/ReferencesView.vue'),
+	},
 	...blogRoutes,
 ];
 

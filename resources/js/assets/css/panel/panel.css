@@ -718,10 +718,16 @@
 	margin-right: 5px;
 	font-size: 14px;
 	font-weight: 400;
-	color: #fff;
-	background: #000;
-	white-space: nowrap;
+	color: var(--text-1);
+	border: 1px solid var(--text-1);
 	border-radius: var(--border-radius);
+	transition: all 0.6s;
+	white-space: nowrap;
+}
+
+.panel_list_article_category_link:hover {
+	color: var(--accent);
+	border: 1px solid var(--accent);
 }
 
 .panel_list_item_link {

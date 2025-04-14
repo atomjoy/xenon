@@ -1,0 +1,49 @@
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"url": "https://www.example.com",
+	"sameAs": [
+		"https://example.net/profile/example1234",
+		"https://example.org/example1234"
+	],
+	"logo": "https://www.example.com/images/logo.png",
+	"name": "Example Corporation",
+	"description": "The example corporation is well-known for producing high-quality widgets",
+	"email": "contact@example.com",
+	"telephone": "+47-99-999-9999",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Rue Improbable 99",
+		"addressLocality": "Paris",
+		"addressCountry": "FR",
+		"addressRegion": "Ile-de-France",
+		"postalCode": "75001"
+	},
+	"vatID": "FR12345678901",
+	"iso6523Code": "0199:724500PMK2A2M1SQQ222",
+	"founder": {
+		"@type": "Person",
+		"name": "Caitlin Bright",
+		"sameAs": [
+			"https://www.linkedin.com/in/example/",
+			"https://instagram.com/example",
+			"https://twitter.com/example"
+		],
+		"image": {
+			"@type": "ImageObject",
+			"url": "https://example.com.au/wp-content/uploads/2021/11/example-contact.png"
+		},
+		"knowsAbout": [
+			{
+				"@type": "DefinedTerm",
+				"name": "copywriting",
+				"@id": "https://www.wikidata.org/wiki/Q624896"
+			},
+			{
+				"@type": "DefinedTerm",
+				"name": "journalism",
+				"@id": "https://www.wikidata.org/wiki/Q11030"
+			}
+		]
+	}
+}

@@ -35,6 +35,7 @@ class Work extends Model
 		'meta_seo',
 		'schema_seo',
 		'published_at',
+		'expired_at',
 	];
 
 	/**
@@ -46,6 +47,8 @@ class Work extends Model
 	{
 		return [
 			'created_at' => 'datetime:Y-m-d H:i:s',
+			'published_at' => 'datetime:Y-m-d H:i:s',
+			'expired_at' => 'datetime:Y-m-d H:i:s',
 			'schema_seo' => 'json',
 			'meta_seo' => 'json',
 		];

@@ -3,9 +3,10 @@ import ChangeDescription from '@/components/utils/ChangeDescription/ChangeDescri
 import ChangeTitle from '@/components/utils/ChangeTitle/ChangeTitle.vue';
 import AddSchema from '@/components/utils/Html/AddSchema.vue';
 import AddMeta from '@/components/utils/Html/AddMeta.vue';
-import Layout from '@/layouts/page/DefaultLayout.vue';
-import ContactCareer from './parts/ContactCareer.vue';
-import { RouterLink } from 'vue-router';
+import Layout from '@/layouts/page/CareerScrollBarLayout.vue';
+import Benefits from './parts/Benefits.vue';
+import Careers from './parts/Careers.vue';
+import CareersAbout from './parts/CareersAbout.vue';
 import { onMounted } from 'vue';
 
 onMounted(async () => {});
@@ -13,7 +14,9 @@ onMounted(async () => {});
 
 <template>
 	<Layout title="Career" description="Career Inquiries.">
-		<ContactCareer />
+		<CareersAbout />
+		<Benefits />
+		<Careers />
 	</Layout>
 
 	<!-- Seo header meta -->

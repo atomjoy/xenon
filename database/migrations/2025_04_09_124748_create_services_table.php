@@ -16,10 +16,11 @@ return new class extends Migration
 			$table->string('title');
 			$table->string('excerpt');
 			$table->string('slug')->unique();
+			$table->string('image')->nullable();
+			$table->string('tags')->nullable();
+			$table->string('icon')->nullable()->default('fa-regular fa-lightbulb');
 			$table->text('content_html')->nullable();
 			$table->text('content_cleaned')->nullable();
-			$table->string('tags')->nullable();
-			$table->string('image')->nullable();
 			$table->unsignedBigInteger('views')->nullable()->default(0);
 			$table->json('meta_seo')->nullable();
 			$table->json('schema_seo')->nullable();

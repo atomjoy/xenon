@@ -30,6 +30,7 @@ class Service extends Model
 		'content_html',
 		'content_cleaned',
 		'tags',
+		'icon',
 		'views',
 		'meta_seo',
 		'schema_seo',

@@ -1,0 +1,49 @@
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "EducationalOrganization",
+			"name": "TAFE NSW",
+			"alternateName": "Technical and further education",
+			"url": "https://www.tafensw.edu.au",
+			"@id": "https://www.tafensw.edu.au/#organization",
+			"sameAs": [
+				"https://www.wikidata.org/wiki/Q37511841",
+				"https://www.facebook.com/tafensw",
+				"https://www.linkedin.com/company/tafe-nsw",
+				"https://www.youtube.com/tafe"
+			],
+			"areaServed": {
+				"@type": "AdministrativeArea",
+				"name": "New South Wales"
+			}
+		},
+		{
+			"@type": "course",
+			"coursecode": "HE20503V01",
+			"name": "Graduate certificate in leadership",
+			"description": "Take a step up the career ladder and be prepared for advanced leadership roles when you study the Graduate Certificate in Leadership. Develop your leadership skills, learn to manage organisational change and learn how to motive others to improve individual and team performance. You’ll also get an insight into your own leadership style and how you can use this to create successful, high performing team environments. This course is taught by industry experts and focuses on developing transformational leaders who can deliver the strategic vision of an organisation while supporting the professional development of the teams they lead.",
+			"provider": {
+				"@id": "https://www.tafensw.edu.au/#organization"
+			},
+			"numberOfCredits": "40",
+			"url": "https://www.tafensw.edu.au/course-areas/business-and-marketing/courses/graduate-certificate-in-leadership--HE20503V01#courseUnits"
+		},
+		{
+			"@type": "course",
+			"coursecode": "HE20501V03",
+			"name": "Bachelor of interior design",
+			"description": "Create innovative spaces as an interior designer as you combine your understanding of the interaction between people and spaces with your skills in concept creation and project management. The TAFE NSW Bachelor of Interior Design equips you with technical skills in future-focused digital design and the practical aptitude to realise your design projects with confidence. Graduate ready to step into a diverse range of workplaces whether it’s as a consultant, in an interior-specific design business, an architecture firm, or an interior design department of a property development firm.",
+			"provider": {
+				"@id": "https://www.tafensw.edu.au/#organization"
+			},
+			"numberOfCredits": "240",
+			"about": {
+				"@type": "DefinedTerm",
+				"name": "interior design",
+				"@id": "https://www.wikidata.org/wiki/Q179232"
+			},
+			"url": "https://www.tafensw.edu.au/course-areas/design-and-media/courses/bachelor-of-interior-design--HE20501V03#courseUnits"
+		}
+	]
+}
