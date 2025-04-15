@@ -1,9 +1,6 @@
 <?php
 
 return [
-	// Career email
-	'career_email' => 'career@example.com',
-
 	// Login rate limit
 	// 'ratelimit_login_time' => 300,
 	// 'ratelimit_login_count' => 5,
