@@ -7,32 +7,32 @@ const props = defineProps({
 	<div class="page_employee">
 		<img class="image" :src="'/img/show?path=' + props.obj.image" />
 		<div class="name">
-			<a :href="'/team/' + props.obj.slug" class="employee_link">{{ props.obj.name }}</a>
+			<a :href="'/team/' + props.obj.slug" class="employee_link" :title="props.obj.name">{{ props.obj.name }}</a>
 		</div>
 		<div class="position">{{ props.obj.position }}</div>
 		<div class="socials">
-			<a :href="props.obj.facebook" class="link" v-if="props.obj.facebook" target="_blank">
+			<a :href="props.obj.facebook" class="link" v-if="props.obj.facebook" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-facebook"></i>
 			</a>
-			<a :href="props.obj.twitter" class="link" v-if="props.obj.twitter" target="_blank">
+			<a :href="props.obj.twitter" class="link" v-if="props.obj.twitter" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-twitter"></i>
 			</a>
-			<a :href="props.obj.instagram" class="link" v-if="props.obj.instagram" target="_blank">
+			<a :href="props.obj.instagram" class="link" v-if="props.obj.instagram" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-instagram"></i>
 			</a>
-			<a :href="props.obj.youtube" class="link" v-if="props.obj.youtube" target="_blank">
+			<a :href="props.obj.youtube" class="link" v-if="props.obj.youtube" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-youtube"></i>
 			</a>
-			<a :href="props.obj.linkedin" class="link" v-if="props.obj.linkedin" target="_blank">
+			<a :href="props.obj.linkedin" class="link" v-if="props.obj.linkedin" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-linkedin"></i>
 			</a>
-			<a :href="props.obj.pinterest" class="link" v-if="props.obj.pinterest" target="_blank">
+			<a :href="props.obj.pinterest" class="link" v-if="props.obj.pinterest" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-pinterest"></i>
 			</a>
-			<a :href="props.obj.dribbble" class="link" v-if="props.obj.dribbble" target="_blank">
+			<a :href="props.obj.dribbble" class="link" v-if="props.obj.dribbble" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-dribbble"></i>
 			</a>
-			<a :href="props.obj.behance" class="link" v-if="props.obj.behance" target="_blank">
+			<a :href="props.obj.behance" class="link" v-if="props.obj.behance" target="_blank" :title="$t('Social link')">
 				<i class="fa-brands fa-behance"></i>
 			</a>
 		</div>

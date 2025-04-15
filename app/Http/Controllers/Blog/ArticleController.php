@@ -6,7 +6,6 @@ use App\Models\Article;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\ArticleCollection;
 use App\Http\Resources\ArticleResource;
-use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
@@ -19,7 +18,7 @@ class ArticleController extends Controller
 
 		return new ArticleCollection(
 			Article::latest('id')
-				->orWhereDate('published_at', '<', now())
+				->whereDate('published_at', '<', now())
 				->paginate($perpage)
 		);
 	}

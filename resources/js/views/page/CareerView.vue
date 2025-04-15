@@ -7,9 +7,6 @@ import Layout from '@/layouts/page/CareerScrollBarLayout.vue';
 import Benefits from './parts/Benefits.vue';
 import Careers from './parts/Careers.vue';
 import CareersAbout from './parts/CareersAbout.vue';
-import { onMounted } from 'vue';
-
-onMounted(async () => {});
 </script>
 
 <template>

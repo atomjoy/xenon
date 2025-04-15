@@ -1,27 +1,17 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
 import Question from './items/Question.vue';
-import Pagination from './items/Pagination.vue';
+import ButtonLink from './items/ButtonLinkRight.vue';
 
-const router = useRouter();
-const route = useRoute();
-let current_page = ref(1);
-let last_page = ref(1);
-let perpage = ref(6);
 let list = ref([]);
 
 onMounted(async () => {
-	current_page.value = route.query.page ?? 1;
 	await load();
 });
 
 async function load() {
-	let res = await axios.get('/web/api/blog/questions?page=' + current_page.value + '&perpage=' + perpage.value);
+	let res = await axios.get('/web/api/blog/questions?page=1&perpage=5');
 	list.value = res?.data?.data ?? [];
-	current_page.value = res?.data?.paginate.current_page ?? 1;
-	last_page.value = res?.data?.paginate.total_pages ?? 1;
-	router.push({ query: { page: current_page.value } });
 }
 </script>
 
@@ -39,7 +29,9 @@ async function load() {
 			<Question :message="i.message" :answer="i.answer" v-for="i in list" />
 		</div>
 
-		<Pagination href="/faq" :current_page="current_page" :last_page="last_page" :list="list" />
+		<div class="page_box_padding_block">
+			<ButtonLink name="See Our FAQs" href="/faq" />
+		</div>
 	</div>
 </template>
 

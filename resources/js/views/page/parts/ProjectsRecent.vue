@@ -1,27 +1,17 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
 import Project from './items/Project.vue';
-import Pagination from './items/Pagination.vue';
+import ButtonLink from './items/ButtonLinkRight.vue';
 
-const router = useRouter();
-const route = useRoute();
-let current_page = ref(1);
-let last_page = ref(1);
-let perpage = ref(6);
 let list = ref([]);
 
 onMounted(async () => {
-	current_page.value = route.query.page ?? 1;
 	await load();
 });
 
 async function load() {
-	let res = await axios.get('/web/api/blog/projects?page=' + current_page.value + '&perpage=' + perpage.value);
+	let res = await axios.get('/web/api/blog/projects?page=1&perpage=2');
 	list.value = res?.data?.data ?? [];
-	current_page.value = res?.data?.paginate.current_page ?? 1;
-	last_page.value = res?.data?.paginate.total_pages ?? 1;
-	router.push({ query: { page: current_page.value } });
 }
 </script>
 
@@ -29,7 +19,8 @@ async function load() {
 	<div class="page_box" id="projects">
 		<p class="page_box_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Our projects') }}</p>
 		<h1>
-			{{ $t('Our Recent Work Portfolio') }}
+			{{ $t('Our Recent') }} <br />
+			{{ $t('Work Portfolio') }}
 		</h1>
 
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum dolores, excepturi pariatur, perferendis consequuntur architecto nemo labore quae minus ea eum velit fugit exercitationem assumenda impedit natus reiciendis quidem!</p>
@@ -41,7 +32,9 @@ async function load() {
 			</div>
 		</div>
 
-		<Pagination href="/projects" :current_page="current_page" :last_page="last_page" :list="list" />
+		<div class="page_box_padding_block">
+			<ButtonLink name="More Projects" href="/projects" />
+		</div>
 	</div>
 </template>
 

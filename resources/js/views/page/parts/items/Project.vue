@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 <template>
 	<div class="page_project">
-		<a :href="'/projects/' + props.obj.slug" class="project_link">
+		<a :href="'/projects/' + props.obj.slug" class="project_link" :title="props.obj.title">
 			<img class="image" :src="'/img/show?path=' + props.obj.image" />
 		</a>
 
@@ -16,8 +16,8 @@ const props = defineProps({
 		</div>
 
 		<div class="name">
-			<a :href="'/projects/' + props.obj.slug" class="project_title">{{ props.obj.title }} </a>
-			<a :href="'/projects/' + props.obj.slug" class="project_icon">
+			<a :href="'/projects/' + props.obj.slug" class="project_title" :title="props.obj.title">{{ props.obj.title }} </a>
+			<a :href="'/projects/' + props.obj.slug" class="project_icon" :title="props.obj.title">
 				<i class="fa-solid fa-arrow-right"></i>
 			</a>
 		</div>

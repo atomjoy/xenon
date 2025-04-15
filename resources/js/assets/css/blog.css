@@ -690,7 +690,7 @@ img.blog_header_logo {
 	margin-bottom: 0px;
 }
 
-.splide {
+.splide-blog {
 	float: left;
 	width: 100%;
 	height: auto;
@@ -698,7 +698,7 @@ img.blog_header_logo {
 	border-radius: var(--border-radius);
 }
 
-.splide__slide img {
+.splide-blog .splide__slide img {
 	float: left;
 	width: 100%;
 	aspect-ratio: 16/9;

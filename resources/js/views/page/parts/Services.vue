@@ -37,7 +37,7 @@ async function load() {
 		<div class="page_box_list">
 			<div class="page_items_flex">
 				<Service :obj="i" v-for="i in list" />
-				<div class="page_service" style="visibility: hidden" v-if="list.length % 2">Required</div>
+				<div class="page_service" style="visibility: hidden" v-if="list.length % 2 == 0">Required</div>
 			</div>
 		</div>
 

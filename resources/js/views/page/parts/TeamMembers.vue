@@ -1,35 +1,26 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
 import Team from './items/Team.vue';
-import Pagination from './items/Pagination.vue';
+import ButtonLink from './items/ButtonLinkRight.vue';
 
-const router = useRouter();
-const route = useRoute();
-let current_page = ref(1);
-let last_page = ref(1);
-let perpage = ref(6);
 let list = ref([]);
 
 onMounted(async () => {
-	current_page.value = route.query.page ?? 1;
 	await load();
 });
 
 async function load() {
-	let res = await axios.get('/web/api/blog/teams?page=' + current_page.value + '&perpage=' + perpage.value);
+	let res = await axios.get('/web/api/blog/teams?page=1&perpage=3');
 	list.value = res?.data?.data ?? [];
-	current_page.value = res?.data?.paginate.current_page ?? 1;
-	last_page.value = res?.data?.paginate.total_pages ?? 1;
-	router.push({ query: { page: current_page.value } });
 }
 </script>
 
 <template>
 	<div class="page_box" id="teams">
-		<p class="page_box_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Our employees') }}</p>
+		<p class="page_box_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Team members') }}</p>
 		<h1>
-			{{ $t('Current employees') }}
+			{{ $t('Meet Our') }} <br />
+			{{ $t('Professional Team') }}
 		</h1>
 
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi rerum dolores, excepturi pariatur, perferendis consequuntur architecto nemo labore quae minus ea eum velit fugit exercitationem assumenda impedit natus reiciendis quidem!</p>
@@ -41,7 +32,9 @@ async function load() {
 			</div>
 		</div>
 
-		<Pagination href="/team" :current_page="current_page" :last_page="last_page" :list="list" />
+		<div class="page_box_padding_block">
+			<ButtonLink name="See All Members" href="/team" />
+		</div>
 	</div>
 </template>
 

@@ -70,16 +70,18 @@ async function load() {
 
 .splide-references button.slider-prev {
 	background-color: var(--accent) !important;
+	border: 9px solid var(--bg-1);
 	height: 4em;
 	width: 4em;
-	stroke: #fff;
-	fill: #fff;
+	left: -2em;
 }
 
 .splide-references button.slider-next {
 	background-color: var(--accent) !important;
+	border: 9px solid var(--bg-1);
 	height: 4em;
 	width: 4em;
+	right: -2em;
 }
 
 .splide-references button.slider-prev svg path,

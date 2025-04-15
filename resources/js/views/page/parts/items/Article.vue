@@ -4,25 +4,23 @@ const props = defineProps({
 });
 </script>
 <template>
-	<div class="page_service">
-		<a :href="'/services/' + props.obj.slug" class="service_link" :title="props.obj.title">
+	<div class="page_article">
+		<a :href="'/articles/' + props.obj.slug" class="article_link" :title="props.obj.title">
 			<img class="image" :src="'/img/show?path=' + props.obj.image" />
 		</a>
 
 		<div class="name">
-			<a :href="'/services/' + props.obj.slug" class="service_link" :title="props.obj.title"> <i class="page_service_icon" :class="props.obj.icon"></i> {{ props.obj.title }} </a>
+			<a :href="'/articles/' + props.obj.slug" class="article_link" :title="props.obj.title">{{ props.obj.title }}</a>
 		</div>
 		<div class="description">{{ props.obj.excerpt }}</div>
-		<div class="tags">
-			<div class="box">
-				<div class="cat" v-for="i in props.obj.tags.split(',')">{{ i }}</div>
-			</div>
+		<div class="categories">
+			<a class="category" :href="'/category/' + cat.slug" :title="cat.name" v-for="cat in props.obj.categories">#{{ cat.name }}</a>
 		</div>
 	</div>
 </template>
 
 <style>
-.page_service {
+.page_article {
 	position: relative;
 	float: left;
 	width: 32%;
@@ -31,28 +29,29 @@ const props = defineProps({
 	box-sizing: border-box;
 	transition: all 0.6s;
 	overflow: hidden;
+	background: var(--bg-2);
 	border: 1px solid var(--bg-1);
 	border-radius: var(--border-radius);
 	display: flex;
 	flex-direction: column;
 }
 
-.page_service:hover {
+.page_article:hover {
 	/* border: 1px solid var(--border); */
 	box-shadow: 0px 0px 10px #0001;
 }
 
-.page_service .service_link {
+.page_article .article_link {
 	color: var(--text-1);
 	font-weight: 700;
 	font-size: 18px;
 }
 
-.page_service .service_link:hover {
+.page_article .article_link:hover {
 	color: var(--accent);
 }
 
-.page_service .image {
+.page_article .image {
 	float: left;
 	width: 100%;
 	aspect-ratio: 16/9;
@@ -61,7 +60,7 @@ const props = defineProps({
 	transition: all 0.6s;
 }
 
-.page_service .name {
+.page_article .name {
 	float: left;
 	width: 100%;
 	height: auto;
@@ -69,7 +68,7 @@ const props = defineProps({
 	padding: 20px;
 }
 
-.page_service .description {
+.page_article .description {
 	float: left;
 	width: 100%;
 	height: 100%;
@@ -77,7 +76,23 @@ const props = defineProps({
 	padding-top: 0px;
 }
 
-.page_service .tags {
+.page_article .categories {
+	float: left;
+	width: 100%;
+	padding: 20px;
+}
+
+.page_article .categories a {
+	display: inline;
+	padding: 5px 10px;
+	margin-right: 5px;
+	font-weight: 500;
+	color: var(--text-1);
+	background: var(--bg-3);
+	border-radius: 50px;
+}
+
+.page_article .tags {
 	float: left;
 	width: auto;
 	height: auto;
@@ -86,12 +101,12 @@ const props = defineProps({
 	transition: all 0.6s;
 }
 
-.page_service .tags .box {
+.page_article .tags .box {
 	padding-top: 10px;
 	border-top: 1px solid var(--border);
 }
 
-.page_service .tags .cat {
+.page_article .tags .cat {
 	float: left;
 	width: auto;
 	height: auto;
@@ -103,12 +118,12 @@ const props = defineProps({
 	border-radius: var(--border-radius);
 }
 
-.page_service .service_link {
+.page_article .article_link {
 	display: flex;
 	align-items: center;
 }
 
-.page_service_icon {
+.page_article_icon {
 	float: left;
 	width: 50px;
 	height: 50px;
@@ -121,20 +136,20 @@ const props = defineProps({
 	background: var(--text-1);
 }
 
-.page_service .service_link:hover .page_service_icon {
+.page_article .article_link:hover .page_article_icon {
 	color: var(--accent);
 	background: var(--text-1);
 }
 
 @media all and (max-width: 1024px) {
-	.page_service {
+	.page_article {
 		width: 47%;
 		margin-right: 1%;
 	}
 }
 
-@media all and (max-width: 640px) {
-	.page_service {
+@media all and (max-width: 768px) {
+	.page_article {
 		width: 100%;
 	}
 }

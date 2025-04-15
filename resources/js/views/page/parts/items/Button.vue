@@ -4,7 +4,7 @@ const props = defineProps({
 });
 </script>
 <template>
-	<button class="page_cool_btn">
+	<button class="page_cool_btn" :title="props.name">
 		<span>{{ $t($props.name) }}</span>
 		<i class="fa-solid fa-arrow-right"></i>
 	</button>

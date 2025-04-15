@@ -3,12 +3,8 @@ import ChangeDescription from '@/components/utils/ChangeDescription/ChangeDescri
 import ChangeTitle from '@/components/utils/ChangeTitle/ChangeTitle.vue';
 import AddSchema from '@/components/utils/Html/AddSchema.vue';
 import AddMeta from '@/components/utils/Html/AddMeta.vue';
-import Layout from '@/layouts/page/ContactLayout.vue';
+import Layout from '@/layouts/page/MapLayout.vue';
 import Contact from './parts/Contact.vue';
-import { RouterLink } from 'vue-router';
-import { onMounted } from 'vue';
-
-onMounted(async () => {});
 </script>
 
 <template>
