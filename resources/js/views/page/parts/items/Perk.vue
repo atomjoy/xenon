@@ -33,7 +33,7 @@ const props = defineProps({
 	height: auto;
 	font-weight: 600;
 	padding-top: 20px;
-	color: #000;
+	color: #fff;
 }
 
 .page_perk .text {
@@ -41,7 +41,7 @@ const props = defineProps({
 	width: 100%;
 	height: auto;
 	padding-top: 10px;
-	color: #000;
+	color: #fff;
 }
 
 .page_perk .icon {
@@ -54,8 +54,8 @@ const props = defineProps({
 .page_perk .icon i {
 	float: left;
 	padding: 20px;
-	color: #fff;
-	background: #000;
+	color: var(--accent);
+	background: #fff;
 	border-radius: 50%;
 	text-align: center;
 }

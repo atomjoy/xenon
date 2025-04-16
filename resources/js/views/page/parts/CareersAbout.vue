@@ -6,7 +6,8 @@ import Button from './items/ButtonScroll.vue';
 	<div class="page_box" id="career_about">
 		<p class="page_box_subtitle"><i class="fa-solid fa-circle-chevron-right"></i> {{ $t('Join Our Team') }}</p>
 		<h1>
-			{{ $t('Join Our Team for a Digital Inovaions') }}
+			{{ $t('Join Our Team') }} <br />
+			{{ $t('for a Digital Inovaions') }}
 		</h1>
 
 		<div class="page_box_list">

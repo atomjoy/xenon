@@ -32,7 +32,7 @@ async function load() {
 		</div>
 
 		<div class="page_box_padding_block">
-			<ButtonLink name="All Artciles" href="/articles" />
+			<ButtonLink name="All Artciles" href="/blog" />
 		</div>
 	</div>
 </template>

@@ -1,11 +1,13 @@
-# Laravel Blog
+# Xenon Blog
 
-Config in .env or .env.production and default users in database/seeders.
+Xenon is a Laravel and Vue based blog with multi-guard authentication.
 
 ## Run
 
+Config in .env or .env.production and default users in database/seeders.
+
 ```sh
-# Create storage and public_htmllinks
+# Create storage and public_html links
 php artisan storage:link
 # DB Tables
 php artisan migrate:fresh --seed
@@ -22,7 +24,7 @@ php artisan serve
 Default user login details.
 
 ```sh
-Panel: /login
+ClientPanel: /login
 User: user@example.com
 Pass: Password123#
 
@@ -95,6 +97,8 @@ Route::resource('categories', CategoryController::class)->except(['create', 'edi
 ## Test
 
 ```sh
+php artisan migrate:fresh --seed
+
 php artisan test --stop-on-failure
 
 php artisan test --filter SampleTest --stop-on-failure

@@ -15,9 +15,9 @@ const props = defineProps({
 			<slot name="header">
 				<BlogHeader />
 
-				<div class="page_header_details">
+				<!-- <div class="page_header_details">
 					<BlogCategories />
-				</div>
+				</div> -->
 			</slot>
 		</div>
 	</div>
