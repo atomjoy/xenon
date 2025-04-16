@@ -104,6 +104,12 @@ php artisan test --stop-on-failure
 php artisan test --filter SampleTest --stop-on-failure
 ```
 
+## TODO
+
+```sh
+- Single pages for: Team member, Project, Service
+```
+
 ## Screenshots
 
 <img src="https://raw.githubusercontent.com/atomjoy/laravel-blog/refs/heads/main/screenshots/p1.png" width="100%">
@@ -119,12 +125,6 @@ php artisan test --filter SampleTest --stop-on-failure
 # Icons
 https://www.svgrepo.com/collection/kalai-oval-interface-icons
 https://www.svgrepo.com/collection/solar-linear-icons/
-```
-
-## TODO
-
-```sh
-- Single pages for: Team member, Project, Service
 ```
 
 ## Licence
