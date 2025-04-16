@@ -109,6 +109,7 @@ php artisan test --filter SampleTest --stop-on-failure
 <img src="https://raw.githubusercontent.com/atomjoy/laravel-blog/refs/heads/main/screenshots/p1.png" width="100%">
 <img src="https://raw.githubusercontent.com/atomjoy/laravel-blog/refs/heads/main/screenshots/p2.png" width="100%">
 <img src="https://raw.githubusercontent.com/atomjoy/laravel-blog/refs/heads/main/screenshots/login-client.png" width="100%">
+<img src="https://raw.githubusercontent.com/atomjoy/laravel-blog/refs/heads/main/screenshots/a2.png" width="100%">
 
 ## Links
 
