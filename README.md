@@ -33,7 +33,7 @@ User: admin@example.com
 Pass: Password123#
 ```
 
-## Configs, Component jsons
+## Configs, Component json
 
 ```sh
 # Json
@@ -46,7 +46,7 @@ resources/js/utils/seo
 resources/js/lang
 ```
 
-## Baza danych mysql
+## Mysql table
 
 ```sql
 -- Tabele
@@ -58,7 +58,7 @@ GRANT ALL PRIVILEGES ON *.* TO root@localhost IDENTIFIED BY 'toor' WITH GRANT OP
 GRANT ALL PRIVILEGES ON *.* TO root@127.0.0.1 IDENTIFIED BY 'toor' WITH GRANT OPTION;
 ```
 
-## Produkcja
+## Production
 
 ```sh
 # Linki symboliczne
@@ -79,7 +79,7 @@ php artisan cache:clear
 php artisan optimize:clear
 ```
 
-## Uruchom
+## Compile, Run
 
 ```sh
 npm run build
