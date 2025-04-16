@@ -127,6 +127,7 @@ https://www.svgrepo.com/collection/kalai-oval-interface-icons
 https://www.svgrepo.com/collection/solar-linear-icons
 #Images
 https://unsplash.com
+https://www.nvidia.com
 ```
 
 ## Licence
