@@ -12,7 +12,7 @@ php artisan storage:link
 # DB Tables
 php artisan migrate:fresh --seed
 # Import mysql data
-database/sql/laravel-8.sql
+database/sql/laravel-9.sql
 # Compile
 npm run build
 # Run
@@ -107,7 +107,8 @@ php artisan test --filter SampleTest --stop-on-failure
 ## TODO
 
 ```sh
-- Single pages for: Team member, Project, Service
+- Seo meta tags for main pages with json (uncomment, optional)
+- Social login (implement, optional)
 ```
 
 ## Screenshots

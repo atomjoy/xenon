@@ -54,6 +54,8 @@ class UpdateProjectRequest extends FormRequest
 		$this->merge([
 			'slug' => Str::slug($this->slug, '-'),
 			'content_cleaned' => Html::htmlEntities($this->content_html),
+			// 'schema_seo' => str_replace(["\r\n", " "], '', $this->schema_seo),
+			// 'meta_seo' => str_replace(["\r\n", " "], '', $this->meta_seo),
 		]);
 	}
 }

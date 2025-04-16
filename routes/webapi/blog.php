@@ -38,13 +38,13 @@ Route::prefix('web/api')->name('web.api')->middleware([
 	Route::get('/blog/careers/{work}', [CareerController::class, 'show'])->name('careers.show');
 
 	Route::get('/blog/teams', [TeamController::class, 'index'])->name('teams.index');
-	Route::get('/blog/teams/{employee}', [TeamController::class, 'show'])->name('teams.show');
+	Route::get('/blog/teams/{employee:slug}', [TeamController::class, 'show'])->name('teams.show');
 
 	Route::get('/blog/services', [ServiceController::class, 'index'])->name('services.index');
-	Route::get('/blog/services/{service}', [ServiceController::class, 'show'])->name('services.show');
+	Route::get('/blog/services/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
 
 	Route::get('/blog/projects', [ProjectController::class, 'index'])->name('projects.index');
-	Route::get('/blog/projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
+	Route::get('/blog/projects/{project:slug}', [ProjectController::class, 'show'])->name('projects.show');
 
 	// Logged users only
 	Route::middleware([

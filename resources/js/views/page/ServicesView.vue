@@ -18,8 +18,8 @@ import ReferencesSlider from './parts/ReferencesSlider.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('Services')" />
-	<ChangeDescription :description="$t('Our services.')" />
+	<ChangeTitle :title="'Services'" />
+	<ChangeDescription :description="'Our services.'" />
 </template>
 
 <style>

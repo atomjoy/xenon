@@ -21,14 +21,18 @@ onMounted(() => {
 watch(
 	() => locale.value,
 	(lang) => {
-		el.setAttribute('content', t(props.description));
+		if (props.description) {
+			el.setAttribute('content', t(props.description));
+		}
 	}
 );
 
 watch(
 	() => props.description,
 	(lang) => {
-		el.setAttribute('content', t(props.description));
+		if (props.description) {
+			el.setAttribute('content', t(props.description));
+		}
 	}
 );
 </script>

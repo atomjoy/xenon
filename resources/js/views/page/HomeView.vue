@@ -28,8 +28,8 @@ import HomeTop from './parts/HomeTop.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('Home')" />
-	<ChangeDescription :description="$t('Home description')" />
+	<ChangeTitle :title="'Home'" />
+	<ChangeDescription :description="'Home description'" />
 </template>
 
 <style>

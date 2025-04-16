@@ -19,14 +19,18 @@ onMounted(() => {
 watch(
 	() => locale.value,
 	(lang) => {
-		document.title = t(props.title);
+		if (props.title) {
+			document.title = t(props.title);
+		}
 	}
 );
 
 watch(
 	() => props.title,
 	(lang) => {
-		document.title = t(props.title);
+		if (props.title) {
+			document.title = t(props.title);
+		}
 	}
 );
 </script>

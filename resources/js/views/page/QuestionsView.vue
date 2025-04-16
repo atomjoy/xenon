@@ -16,8 +16,8 @@ import Questions from './parts/Questions.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('FAQs')" />
-	<ChangeDescription :description="$t('Have a question?')" />
+	<ChangeTitle :title="'FAQs'" />
+	<ChangeDescription :description="'Have a question?'" />
 </template>
 
 <style>

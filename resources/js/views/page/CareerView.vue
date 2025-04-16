@@ -20,8 +20,8 @@ import CareersAbout from './parts/CareersAbout.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('Career')" />
-	<ChangeDescription :description="$t('Career Inquiries.')" />
+	<ChangeTitle :title="'Career'" />
+	<ChangeDescription :description="'Career Inquiries.'" />
 </template>
 
 <style>

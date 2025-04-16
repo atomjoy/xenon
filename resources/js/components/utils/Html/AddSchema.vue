@@ -4,25 +4,25 @@ import { watch } from 'vue';
 
 const props = defineProps({
 	json: {
-		type: [Array, Object],
-		default: [],
+		type: Array,
+		default: null,
 	},
 });
 
-const head = document.querySelector('head');
-const el = document.createElement('script');
-
 watch(
 	() => props.json,
-	function (n, o) {
-		try {
-			if (props.json) {
-				el.setAttribute('type', 'application/ld+json');
-				el.setAttribute('id', 'structured-data');
-				el.innerText = JSON.stringify(JSON.parse(props.json));
-				head.appendChild(el);
-			}
-		} catch (err) {}
+	(lang) => {
+		if (props.json) {
+			console.log('Adding Schema', props.json);
+
+			const head = document.querySelector('head');
+			const el = document.createElement('script');
+
+			el.setAttribute('type', 'application/ld+json');
+			el.setAttribute('id', 'structured-data');
+			el.innerText = JSON.stringify(JSON.parse(props.json));
+			head.appendChild(el);
+		}
 	}
 );
 

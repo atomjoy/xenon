@@ -16,8 +16,8 @@ import References from './parts/References.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('Testimonials')" />
-	<ChangeDescription :description="$t('Our testimonials')" />
+	<ChangeTitle :title="'Testimonials'" />
+	<ChangeDescription :description="'Our testimonials'" />
 </template>
 
 <style>

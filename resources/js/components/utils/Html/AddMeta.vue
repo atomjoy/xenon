@@ -1,23 +1,25 @@
 <template></template>
 <script setup>
-import { watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { watch } from 'vue';
 
 const { t, locale } = useI18n({ useScope: 'global' });
 
 const props = defineProps({
 	json: {
-		type: [Array, Object],
-		default: [],
+		type: Array,
+		default: null,
 	},
 });
 
-const head = document.querySelector('head');
-
 watch(
 	() => props.json,
-	function (n, o) {
+	(lang) => {
+		const head = document.querySelector('head');
+
 		try {
+			console.log('Adding Meta', props.json);
+
 			let arr = JSON.parse(props.json);
 
 			arr.forEach((i) => {
@@ -26,7 +28,9 @@ watch(
 				meta.setAttribute('content', t(i.content));
 				head.appendChild(meta);
 			});
-		} catch (err) {}
+		} catch (err) {
+			console.log('Add Meta error', err);
+		}
 	}
 );
 </script>

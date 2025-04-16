@@ -16,8 +16,8 @@ import Contact from './parts/Contact.vue';
 	<!-- <AddSchema :json="item.schema_seo" />
 	<AddMeta :json="item.meta_seo" /> -->
 
-	<ChangeTitle :title="$t('Contact')" />
-	<ChangeDescription :description="$t('Contact description')" />
+	<ChangeTitle :title="'Contact'" />
+	<ChangeDescription :description="'Contact description'" />
 </template>
 
 <style>

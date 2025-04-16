@@ -19,9 +19,19 @@ const routes = [
 		component: () => import('@/views/page/ServicesView.vue'),
 	},
 	{
+		path: '/services/:slug',
+		name: 'services.details',
+		component: () => import('@/views/page/ServiceDetailsView.vue'),
+	},
+	{
 		path: '/projects',
 		name: 'projects',
 		component: () => import('@/views/page/ProjectsView.vue'),
+	},
+	{
+		path: '/projects/:slug',
+		name: 'projects.details',
+		component: () => import('@/views/page/ProjectDetailsView.vue'),
 	},
 	{
 		path: '/career',
@@ -32,6 +42,11 @@ const routes = [
 		path: '/team',
 		name: 'team',
 		component: () => import('@/views/page/TeamView.vue'),
+	},
+	{
+		path: '/team/:slug',
+		name: 'team.details',
+		component: () => import('@/views/page/TeamDetailsView.vue'),
 	},
 	{
 		path: '/faq',
