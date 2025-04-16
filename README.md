@@ -120,9 +120,3 @@ php artisan test --filter SampleTest --stop-on-failure
 https://www.svgrepo.com/collection/kalai-oval-interface-icons
 https://www.svgrepo.com/collection/solar-linear-icons/
 ```
-
-## Licence
-
-```txt
-Private
-```
