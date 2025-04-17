@@ -39,6 +39,11 @@ const routes = [
 		component: () => import('@/views/page/CareerView.vue'),
 	},
 	{
+		path: '/career/:id',
+		name: 'career.details',
+		component: () => import('@/views/page/CareerDetailsView.vue'),
+	},
+	{
 		path: '/team',
 		name: 'team',
 		component: () => import('@/views/page/TeamView.vue'),

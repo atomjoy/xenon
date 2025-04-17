@@ -26,6 +26,9 @@ function apply() {
 			<h2 class="job_title">
 				<span class="page_job_title">{{ props.obj.title }}</span> <span class="page_job_location" v-if="props.obj.location">({{ props.obj.location }})</span>
 				<span class="page_job_apply" @click.stop="apply">{{ $t('Apply') }}</span>
+				<a :href="'/career/' + props.obj.id">
+					<span class="page_job_apply">{{ $t('Details') }}</span>
+				</a>
 			</h2>
 			<div class="job_header">
 				<span v-if="props.obj.id">{{ 'ID-' + props.obj.id }}</span>
@@ -46,6 +49,7 @@ function apply() {
 .page_job_apply {
 	float: left;
 	padding: 5px 10px;
+	margin-right: 10px;
 	color: var(--text-1);
 	background: var(--bg-1);
 	border: 1px solid var(--text-1);
