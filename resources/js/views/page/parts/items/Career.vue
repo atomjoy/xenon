@@ -15,7 +15,8 @@ function toggle(e) {
 
 function apply() {
 	const subject = document.querySelector('#apply_subject');
-	subject.value = 'JOB ID-' + props.obj.id + ' | ' + props.obj.title + ' | ' + props.obj.location;
+	const location = props.obj.location ?? 'On Place';
+	subject.value = 'JOB ID-' + props.obj.id + ' | ' + props.obj.title + ' | ' + location;
 	scrollTo('#contacts');
 }
 </script>
@@ -28,7 +29,7 @@ function apply() {
 			</h2>
 			<div class="job_header">
 				<span v-if="props.obj.id">{{ 'ID-' + props.obj.id }}</span>
-				<span v-if="props.obj.remote">{{ $t('Experience') }}: {{ props.obj.experience }}</span>
+				<span v-if="props.obj.experience">{{ $t('Experience') }}: {{ props.obj.experience }}</span>
 				<span v-if="props.obj.time">{{ $t('Hours') }}: {{ props.obj.time }}</span>
 				<span v-if="props.obj.remote">{{ $t('Remote') }}: {{ props.obj.remote }}</span>
 				<span v-if="props.obj.salary">{{ $t('Salary') }}: {{ props.obj.salary }}</span>

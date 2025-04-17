@@ -131,9 +131,3 @@ https://www.svgrepo.com/collection/solar-linear-icons
 https://unsplash.com
 https://www.nvidia.com
 ```
-
-## Licence
-
-```txt
-Private
-```

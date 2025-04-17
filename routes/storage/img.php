@@ -26,6 +26,7 @@ Route::get('/img/show', function () {
 		if (Storage::exists($path)) {
 			return Storage::response($path);
 		}
+		return '';
 		return response()->file(public_path('/default/bg.webp'));
 	} catch (\Throwable $e) {
 		return response()->file(public_path('/default/bg.webp'));
