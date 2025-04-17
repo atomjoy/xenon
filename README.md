@@ -109,6 +109,7 @@ php artisan test --filter SampleTest --stop-on-failure
 ```sh
 - Seo meta tags for main pages with json (uncomment, optional)
 - Social login (implement, optional)
+- Vue locale translations (add, optional)
 ```
 
 ## Screenshots
