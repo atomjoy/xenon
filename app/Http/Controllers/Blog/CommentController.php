@@ -41,7 +41,11 @@ class CommentController extends Controller
 	public function store(StoreCommentRequest $request, Article $article)
 	{
 		try {
-			$user = Auth::guard('web')->user();
+			if (Auth::guard('admin')->check()) {
+				$user = Auth::guard('admin')->user();
+			} else {
+				$user = Auth::guard('web')->user();
+			}
 
 			$valid = $request->validated();
 
