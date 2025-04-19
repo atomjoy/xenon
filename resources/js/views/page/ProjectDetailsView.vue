@@ -6,7 +6,7 @@ import AddMeta from '@/components/utils/Html/AddMeta.vue';
 import Layout from '@/layouts/page/ContactLayout.vue';
 import ReferencesSlider from './parts/ReferencesSlider.vue';
 import Item from './parts/ProjectSingle.vue';
-import { onBeforeMount, onMounted, ref } from 'vue';
+import { onBeforeMount, ref } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();

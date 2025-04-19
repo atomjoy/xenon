@@ -5,12 +5,12 @@ const props = defineProps({
 </script>
 <template>
 	<div class="page_article">
-		<a :href="'/articles/' + props.obj.slug" class="article_link" :title="props.obj.title">
+		<a :href="'/article/' + props.obj.slug" class="article_link" :title="props.obj.title">
 			<img class="image" :src="'/img/show?path=' + props.obj.image" />
 		</a>
 
 		<div class="name">
-			<a :href="'/articles/' + props.obj.slug" class="article_link" :title="props.obj.title">{{ props.obj.title }}</a>
+			<a :href="'/article/' + props.obj.slug" class="article_link" :title="props.obj.title">{{ props.obj.title }}</a>
 		</div>
 		<div class="description">{{ props.obj.excerpt }}</div>
 		<div class="categories">
