@@ -91,4 +91,10 @@ Route::prefix('web/api')->name('web.api')->middleware([
 			]);
 		});
 	});
+
+	Route::get('test/permissions', function () {
+		return response()->json([
+			'user' => Auth::user() ?? null,
+		]);
+	});
 });

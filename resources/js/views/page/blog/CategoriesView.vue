@@ -7,6 +7,8 @@ import AddMeta from '@/components/utils/Html/AddMeta.vue';
 import { codeToHtml } from 'https://esm.sh/shiki@3.2.1';
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
+import schema from '@/settings/seo/categories_schema.js';
+import meta from '@/settings/seo/categories_meta.js';
 
 const route = useRoute();
 let article = ref({});
@@ -56,8 +58,9 @@ async function loadItem(id) {
 	</div>
 
 	<!-- Seo header meta -->
-	<AddSchema :json="article.schema_seo" />
-	<AddMeta :json="article.meta_seo" />
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
+
 	<ChangeTitle :title="article.title ?? '404 Page not found'" />
 	<ChangeDescription :description="article.excerpt ?? 'Page does not exists.'" />
 </template>

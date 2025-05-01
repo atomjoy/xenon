@@ -6,6 +6,8 @@ import AddMeta from '@/components/utils/Html/AddMeta.vue';
 import Layout from '@/layouts/page/ContactLayout.vue';
 import Services from './parts/Services.vue';
 import ReferencesSlider from './parts/ReferencesSlider.vue';
+import schema from '@/settings/seo/services_schema.js';
+import meta from '@/settings/seo/services_meta.js';
 </script>
 
 <template>
@@ -15,8 +17,8 @@ import ReferencesSlider from './parts/ReferencesSlider.vue';
 	</Layout>
 
 	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
 
 	<ChangeTitle :title="'Services'" />
 	<ChangeDescription :description="'Our services.'" />

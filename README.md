@@ -64,6 +64,9 @@ GRANT ALL PRIVILEGES ON *.* TO root@127.0.0.1 IDENTIFIED BY 'toor' WITH GRANT OP
 # Linki symboliczne
 php artisan storage:link
 
+# Clear cache config
+ php artisan optimize:clear
+
 # Baza danych
 php artisan migrate --seed
 php artisan migrate:fresh --seed
@@ -101,7 +104,7 @@ php artisan migrate:fresh --seed
 
 php artisan test --stop-on-failure
 
-php artisan test --filter SampleTest --stop-on-failure
+php artisan test --filter PermissionsTest --stop-on-failure
 ```
 
 ## TODO

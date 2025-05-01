@@ -7,6 +7,8 @@ import Layout from '@/layouts/page/CareerScrollBarLayout.vue';
 import Benefits from './parts/Benefits.vue';
 import Careers from './parts/Careers.vue';
 import CareersAbout from './parts/CareersAbout.vue';
+import schema from '@/settings/seo/career_schema.js';
+import meta from '@/settings/seo/career_meta.js';
 </script>
 
 <template>
@@ -17,8 +19,8 @@ import CareersAbout from './parts/CareersAbout.vue';
 	</Layout>
 
 	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
 
 	<ChangeTitle :title="'Career'" />
 	<ChangeDescription :description="'Career Inquiries.'" />

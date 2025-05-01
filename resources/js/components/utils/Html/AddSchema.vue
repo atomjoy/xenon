@@ -1,34 +1,51 @@
 <template></template>
 <script setup>
-import { watch } from 'vue';
+import { onMounted, watch } from 'vue';
 
 const props = defineProps({
 	json: {
-		type: Array,
+		type: String,
 		default: null,
 	},
+});
+
+onMounted(() => {
+	load();
 });
 
 watch(
 	() => props.json,
 	(lang) => {
-		if (props.json) {
-			console.log('Adding Schema', props.json);
-
-			const head = document.querySelector('head');
-			const el = document.createElement('script');
-
-			el.setAttribute('type', 'application/ld+json');
-			el.setAttribute('id', 'structured-data');
-			el.innerText = JSON.stringify(JSON.parse(props.json));
-			head.appendChild(el);
-		}
+		load();
 	}
 );
+
+function load() {
+	removeSchema();
+
+	if (props.json) {
+		console.log('Adding Schema', props.json);
+
+		let arr = JSON.parse(props.json);
+
+		const head = document.querySelector('head');
+		const el = document.createElement('script');
+
+		el.setAttribute('type', 'application/ld+json');
+		el.setAttribute('id', 'structured-data');
+		el.innerText = JSON.stringify(arr);
+		head.appendChild(el);
+	}
+}
 
 function getSchemaObject(id = '#structured-data') {
 	let el = document.querySelector(id);
 	let obj = JSON.parse(el.innerText);
 	return obj;
+}
+
+function removeSchema(id = '#structured-data') {
+	let all = document.querySelectorAll(id);
+	all.forEach((i) => i.remove());
 }
 </script>

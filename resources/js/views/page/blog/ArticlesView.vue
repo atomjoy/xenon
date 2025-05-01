@@ -7,6 +7,8 @@ import AddMeta from '@/components/utils/Html/AddMeta.vue';
 import { ref, onMounted, watch, reactive } from 'vue';
 import { RouterLink, useRoute, useRouter } from 'vue-router';
 import Page from '@/utils/page.js';
+import schema from '@/settings/seo/articles_schema.js';
+import meta from '@/settings/seo/articles_meta.js';
 
 const router = useRouter();
 const route = useRoute();
@@ -74,8 +76,8 @@ function next() {
 	</BlogLayout>
 
 	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
 
 	<ChangeTitle title="Blog" />
 	<ChangeDescription description="You can read the latest articles on our blog here." />

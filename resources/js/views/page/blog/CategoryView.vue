@@ -83,10 +83,6 @@ function next() {
 		</div>
 	</CategoryLayout>
 
-	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
-
 	<ChangeTitle :title="$t('Category: ') + item.name" />
 	<ChangeDescription :description="item.about" />
 </template>

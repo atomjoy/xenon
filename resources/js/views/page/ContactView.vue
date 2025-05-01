@@ -5,6 +5,8 @@ import AddSchema from '@/components/utils/Html/AddSchema.vue';
 import AddMeta from '@/components/utils/Html/AddMeta.vue';
 import Layout from '@/layouts/page/MapLayout.vue';
 import Contact from './parts/Contact.vue';
+import schema from '@/settings/seo/contact_schema.js';
+import meta from '@/settings/seo/contact_meta.js';
 </script>
 
 <template>
@@ -13,8 +15,8 @@ import Contact from './parts/Contact.vue';
 	</Layout>
 
 	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
 
 	<ChangeTitle :title="'Contact'" />
 	<ChangeDescription :description="'Contact description'" />

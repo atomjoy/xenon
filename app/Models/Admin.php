@@ -39,6 +39,13 @@ class Admin extends Authenticatable
 	protected $with = ['roles', 'permissions'];
 
 	/**
+	 * Append user all permissions
+	 *
+	 * @var array
+	 */
+	protected $appends = ['permission'];
+
+	/**
 	 * The attributes that are mass assignable.
 	 *
 	 * @var list<string>
@@ -118,5 +125,13 @@ class Admin extends Authenticatable
 	public function profile(): MorphOne
 	{
 		return $this->morphOne(Profile::class, 'profileable');
+	}
+
+	/**
+	 * Spatie get all user permissions (direct + roles)
+	 */
+	public function getPermissionAttribute()
+	{
+		return $this->getAllPermissions();
 	}
 }

@@ -11,6 +11,8 @@ import WorkingProcess from './parts/WorkingProcess.vue';
 import ServicesHome from './parts/ServicesHome.vue';
 import Articles from './parts/Articles.vue';
 import HomeTop from './parts/HomeTop.vue';
+import schema from '@/settings/seo/homepage_schema.js';
+import meta from '@/settings/seo/homepage_meta.js';
 </script>
 
 <template>
@@ -25,8 +27,8 @@ import HomeTop from './parts/HomeTop.vue';
 	</Layout>
 
 	<!-- Seo header meta -->
-	<!-- <AddSchema :json="item.schema_seo" />
-	<AddMeta :json="item.meta_seo" /> -->
+	<AddMeta :json="JSON.stringify(meta)" />
+	<AddSchema :json="JSON.stringify(schema)" />
 
 	<ChangeTitle :title="'Home'" />
 	<ChangeDescription :description="'Home description'" />

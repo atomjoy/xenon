@@ -109,8 +109,8 @@ async function loadItem(id) {
 	</ArticleLayout>
 
 	<!-- Seo header meta -->
-	<AddSchema :json="article.schema_seo" />
 	<AddMeta :json="article.meta_seo" />
+	<AddSchema :json="article.schema_seo" />
 
 	<ChangeTitle :title="article.title ?? ''" />
 	<ChangeDescription :description="article.excerpt ?? ''" />
