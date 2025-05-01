@@ -64,9 +64,9 @@ async function addComment(article_id) {
 	</div>
 
 	<div class="blog_comments_paginate">
-		<a :href="'?page=' + prev_page" v-if="current_page > 1">Prev</a>
+		<a :href="'?page=' + prev_page" v-if="current_page > 1">{{ $t('Prev') }}</a>
 		<span v-if="total_pages > 1">{{ current_page }} / {{ total_pages }}</span>
-		<a :href="'?page=' + next_page" v-if="current_page < total_pages">Next</a>
+		<a :href="'?page=' + next_page" v-if="current_page < total_pages">{{ $t('Next') }}</a>
 	</div>
 </template>
 
