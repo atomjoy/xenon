@@ -42,10 +42,10 @@ class ArticleResource extends JsonResource
 			'tags' => $this->tags,
 			'admin_id' => $this->admin_id,
 			'categories' => $this->categories,
-			'comments_count' => $this->comments()->where('is_approved', true)->count(),
+			'comments_count' => $this->comments()->where('is_approved', 1)->count(),
 			'comments' => new CommentCollection(
 				$this->comments()
-					->where('is_approved', true)
+					->where('is_approved', 1)
 					->whereNull('reply_id')
 					->paginate(perPage: $request->integer('perpage', 6))
 			),

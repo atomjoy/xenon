@@ -1,6 +1,6 @@
 <script setup>
 import Comment from './Comment.vue';
-import { onMounted, ref } from 'vue';
+import { ref, defineProps, watch } from 'vue';
 import { useAuthStore } from '@/stores/auth.js';
 import { RouterLink } from 'vue-router';
 import { useI18n } from 'vue-i18n';
@@ -17,16 +17,19 @@ let next_page = ref(0);
 let prev_page = ref(0);
 
 const props = defineProps({
-	article: { type: Object, default: '' },
+	article: { type: Object, default: {} },
 	paginate: { type: Object, default: {} },
 });
 
-onMounted(() => {
-	total_pages.value = props.paginate.total_pages;
-	current_page.value = props.paginate.current_page;
-	next_page.value = current_page.value >= total_pages.value ? (next_page.value = current_page.value) : (next_page.value = current_page.value + 1);
-	prev_page.value = current_page.value > 1 ? (prev_page.value = current_page.value - 1) : (prev_page.value = 1);
-});
+watch(
+	() => props.article,
+	(x, y) => {
+		total_pages.value = props.paginate.total_pages;
+		current_page.value = props.paginate.current_page;
+		next_page.value = current_page.value >= total_pages.value ? (next_page.value = current_page.value) : (next_page.value = current_page.value + 1);
+		prev_page.value = current_page.value > 1 ? (prev_page.value = current_page.value - 1) : (prev_page.value = 1);
+	}
+);
 
 async function addComment(article_id) {
 	try {

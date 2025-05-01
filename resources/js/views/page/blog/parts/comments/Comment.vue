@@ -38,7 +38,7 @@ function openReply(e) {
 </script>
 
 <template>
-	<li class="comment_thread">
+	<li class="comment_thread" v-if="props?.comments?.is_approved">
 		<div class="comment_wrapper">
 			<div class="comment_author">
 				<div class="comment_author_image">

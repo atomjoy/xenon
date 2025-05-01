@@ -22,4 +22,13 @@ class SubscriberFactory extends Factory
 			'is_approved' => 1,
 		];
 	}
+
+	public function approved(): Factory
+	{
+		return $this->state(function (array $attributes) {
+			return [
+				'is_approved' => 1,
+			];
+		});
+	}
 }
