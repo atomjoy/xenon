@@ -99,7 +99,7 @@ class LoginRequest extends FormRequest
                 Mail::to($user)
                     ->locale(app()->getLocale())
                     ->send(new F2aMail($user, $code));
-            } catch (Exception $e) {
+            } catch (\Throwable $e) {
                 Auth::logout();
                 throw new JsonException(__("login.f2a_email_error"), 422);
             }
